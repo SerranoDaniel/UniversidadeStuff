@@ -1,0 +1,2004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "http://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D
+    profile='Immersive' 
+    version='3.2' 
+    xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' 
+    xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.2.xsd'>
+
+    <scene>
+
+    <Viewpoint orientation='1 0 0 -0.2' position='0 6 25'></Viewpoint>
+
+
+    <cylinder def = "cilindro" 
+         radius = "1"
+         height = "1">
+    </cylinder>
+
+    <box def = "caixa"
+      height="1"
+      weight="1">
+    </box>
+
+    <sphere def = "esfera"
+      radius = "1">
+    </sphere>
+
+    <extrusion id="formaCircGrossaCor" creaseAngle='1.57'
+      crossSection="
+        1.00 0.00 
+        0.92 -0.38 
+        0.71 -0.71 
+        0.38 -0.92 
+        0.00 -1.00 
+        -0.38 -0.92 
+        -0.71 -0.71 
+        -0.92 -0.38 
+        -1.00 -0.00 
+        -0.92 0.38 
+        -0.71 0.71 
+        -0.38 0.92 
+        0.00 1.00 
+        0.38 0.92 
+        0.71 0.71 
+        0.92 0.38 
+        1.00 0.00
+                "
+
+        spine="
+          2.00 0.0 0.00 
+          1.85 0.0 0.77 
+          1.41 0.0 1.41 
+          0.77 0.0 1.85 
+          0.00 0.0 2.00 
+          -0.77 0.0 1.85 
+          -1.41 0.0 1.41 
+          -1.85 0.0 0.77 
+          -2.00 0.0 0.00 
+          -1.85 0.0 -0.77 
+          -1.41 0.0 -1.41 
+          -0.77 0.0 -1.85 
+          0.00 0.0 -2.00 
+           "
+        >
+        </extrusion>
+
+        <extrusion id="formaCircGrossa" creaseAngle='1.57'
+          crossSection="
+            1.00 0.00 
+            0.92 -0.38 
+            0.71 -0.71 
+            0.38 -0.92 
+            0.00 -1.00 
+            -0.38 -0.92 
+            -0.71 -0.71 
+            -0.92 -0.38 
+            -1.00 -0.00 
+            -0.92 0.38 
+            -0.71 0.71 
+            -0.38 0.92 
+            0.00 1.00 
+            0.38 0.92 
+            0.71 0.71 
+            0.92 0.38 
+            1.00 0.00"
+
+          spine="
+            2.00 0.0 0.00 
+            1.85 0.0 0.77 
+            1.41 0.0 1.41 
+            0.77 0.0 1.85 
+            0.00 0.0 2.00 
+            -0.77 0.0 1.85 
+            -1.41 0.0 1.41 
+            -1.85 0.0 0.77 
+            -2.00 0.0 0.00 
+            -1.85 0.0 -0.77 
+            -1.41 0.0 -1.41 
+            -0.77 0.0 -1.85 
+            0.00 0.0 -2.00
+            0.77 0.0 -1.85 
+            1.41 0.0 -1.41 
+            1.85 0.0 -0.77 
+            2.00 0.0 0.00">
+        </extrusion>
+
+        <extrusion id="formaCorr" creaseAngle='1.57'
+          crossSection="
+            0.00 -0.5 
+            -0.19 -0.46 
+            -0.355 -0.355 
+            -0.46 -0.19 
+            -0.5 -0.00 
+            -0.46 0.19 
+            -0.355 0.355 
+            -0.19 0.46 
+            0.00 0.5
+            0.00 -0.5"
+
+          spine="
+            2.00 0.0 0.00 
+            1.85 0.0 0.77 
+            1.41 0.0 1.41 
+            0.77 0.0 1.85 
+            0.00 0.0 2.00 
+            -0.77 0.0 1.85 
+            -1.41 0.0 1.41 
+            -1.85 0.0 0.77 
+            -2.00 0.0 0.00              
+            "
+
+            scale="
+            0.6 0.7
+            ">
+        </extrusion>
+
+        <extrusion id="formaPneu" creaseAngle='1.57'
+          crossSection="
+            0.00 -0.5 
+            -0.19 -0.46 
+            -0.355 -0.355 
+            -0.46 -0.19 
+            -0.5 -0.00 
+            -0.46 0.19 
+            -0.355 0.355 
+            -0.19 0.46 
+            0.00 0.5
+            0.00 -0.5"
+
+          spine="
+            2.00 0.0 0.00 
+            1.85 0.0 0.77 
+            1.41 0.0 1.41 
+            0.77 0.0 1.85 
+            0.00 0.0 2.00 
+            -0.77 0.0 1.85 
+            -1.41 0.0 1.41 
+            -1.85 0.0 0.77 
+            -2.00 0.0 0.00 
+            -1.85 0.0 -0.77 
+            -1.41 0.0 -1.41 
+            -0.77 0.0 -1.85 
+            0.00 0.0 -2.00
+            0.77 0.0 -1.85 
+            1.41 0.0 -1.41 
+            1.85 0.0 -0.77 
+            2.00 0.0 0.00"
+
+            scale="
+            0.6 1.5
+            ">
+        </extrusion>
+
+        <extrusion id="formaJante" creaseAngle='1.57'
+          crossSection="
+            0.00 -0.5 
+            -0.19 -0.46 
+            -0.355 -0.355 
+            -0.46 -0.19 
+            -0.5 -0.00 
+            -0.46 0.19 
+            -0.355 0.355 
+            -0.19 0.46 
+            0.00 0.5
+            0.00 -0.5"
+
+          spine="
+            2.00 0.0 0.00 
+            1.85 0.0 0.77 
+            1.41 0.0 1.41 
+            0.77 0.0 1.85 
+            0.00 0.0 2.00 
+            -0.77 0.0 1.85 
+            -1.41 0.0 1.41 
+            -1.85 0.0 0.77 
+            -2.00 0.0 0.00 
+            -1.85 0.0 -0.77 
+            -1.41 0.0 -1.41 
+            -0.77 0.0 -1.85 
+            0.00 0.0 -2.00
+            0.77 0.0 -1.85 
+            1.41 0.0 -1.41 
+            1.85 0.0 -0.77 
+            2.00 0.0 0.00"
+
+          scale="
+            0.40 0.5">
+        </extrusion>
+
+         <extrusion id="formaPes" creaseAngle='1.57'
+          crossSection="
+            0.00 -0.5 
+            -0.19 -0.46 
+            -0.355 -0.355 
+            -0.46 -0.19 
+            -0.5 -0.00 
+            -0.46 0.19 
+            -0.355 0.355 
+            -0.19 0.46 
+            0.00 0.5
+            0.00 -0.5"
+
+          spine="
+            2.00 0.0 0.00 
+            1.85 0.0 0.77 
+            1.41 0.0 1.41 
+            0.77 0.0 1.85 
+            0.00 0.0 2.00 
+            -0.77 0.0 1.85 
+            -1.41 0.0 1.41 
+            -1.85 0.0 0.77 
+            -2.00 0.0 0.00 
+            -1.85 0.0 -0.77 
+            -1.41 0.0 -1.41 
+            -0.77 0.0 -1.85 
+            0.00 0.0 -2.00
+            0.77 0.0 -1.85 
+            1.41 0.0 -1.41 
+            1.85 0.0 -0.77 
+            2.00 0.0 0.00"
+
+            scale="
+            1.6 1.2
+            ">
+          </extrusion>
+
+          <extrusion id="formaTri" creaseAngle='1.57'
+          crossSection="
+            -0.2 0.2
+            0.2 -0.1
+            -0.2 -0.1
+            -0.2 0.2">
+        </extrusion>
+
+        <extrusion id="bancoSelim" creaseAngle='1.57' 
+          crossSection='
+          1.00 0.00 
+          0.92 -0.38 
+          0.71 -0.71 
+          0.38 -0.92 
+          0.00 -1.00 
+          -0.38 -0.92 
+          -0.71 -0.71 
+          -0.92 -0.38 
+          -1.00 -0.00                  
+          1.00 0.00' 
+
+          endCap='true' 
+
+          scale='
+          0.05 0.0
+          0.08 0.1
+          0.16 0.15
+          0.2 0.18
+          0.3 0.2
+          0.5 0.35
+          0.520 0.36
+          0.550 0.37
+          0.570 0.38
+          0.580 0.39
+          0.6 0.4
+          0.6 0.35
+          0.3 0.2
+          0.2 0.2
+          0.15 0.2
+          0.14 0.2
+          0.13 0.16
+          0.13 0.14
+          0.13 0.12
+          0.12 0.10
+          0.11 0.08
+          0.10 0.07
+          0.09 0.06
+          0.08 0.05
+          0.07 0.04
+          0.05 0.02
+          0.03 0.0'
+
+          spine='
+          0.0 0.05 0.0 
+          0.0 0.08 0.0 
+          0.0 0.1 0.0 
+          0.0 0.15 0.0 
+          0.0 0.2 0.0
+          0.0 0.4 0.0
+          0.0 0.5 0.0
+          0.0 0.6 0.0
+          0.0 0.7 0.0
+          0.0 0.8 0.0
+          0.0 0.9 0.0
+          0.0 1 0.0
+          0.0 1.6 0.0
+          0.0 1.8 0.0
+          0.0 1.9 0.0
+          0.0 2 0.0
+          0.0 2.05 0.0
+          0.0 2.06 0.0
+          0.0 2.07 0.0
+          0.0 2.08 0.0
+          0.0 2.09 0.0
+          0.0 2.1 0.0
+          0.0 2.11 0.0
+          0.0 2.12 0.0
+          0.0 2.13 0.0
+          0.0 2.14 0.0
+          0.0 2.15 0.0'>
+        </extrusion>
+
+      <Group>
+
+        <transform id="Space">
+
+
+          <transform id="bmx" rotation="0 1 0 -0.5">
+
+            <transform id="quadro">
+
+
+              <transform id="pecaPrincCima" scale="0.17 4.3 0.17" rotation="0 0 1 1.85">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+
+              <transform id="pecaPrincBaixo" translation="0.3 -1.25 0" scale="0.175 4.5 0.175" rotation="0 0 1 2.2">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+
+              <transform id="ligacaoFront" translation="2.18 0.3 0" scale="0.18 1.02 0.18" rotation="0 0 1 0.2">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+              <transform id="ligacaoTras" translation="-1.9 -1.4 0" scale="0.175 2.5 0.175" rotation="0 0 1 0.25">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>    
+
+              <transform id="ligacaoBaixo" translation="-1.56 -2.6 0" scale="0.175 0.8 0.175" rotation="1 0 0 1.57">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+
+              <transform id="ligacaorodaA1d" translation="-3.91 -2.12 0.345" scale="0.12 3.05 0.12" rotation="0 0 1 2.35">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>  
+
+              <transform id="ligacaorodaA2d" scale="0.12 0.115 0.13" translation="-2.825 -1.03 0.35">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+              <transform id="ligacaorodaA3d" translation="-2.5 -0.8 0.2" rotation="0 0 1 2.2">
+                <transform scale="0.12 0.85 0.12" rotation="1 0 0 0.4">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="ligacaorodaA4d" translation="-3.65 -3.02 0.34" scale="0.12 2.7 0.12" rotation="0 0 1 1.67">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="ligacaorodaA5d" translation="-2 -2.75 0.2" rotation="0 0 1 2">
+                <transform scale="0.12 0.8 0.12" rotation="1 0 0 0.4">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>     
+
+              <transform id="ligacaorodaA6d" scale="0.2 0.12 0.13" translation="-2.32 -2.89 0.342">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+              <transform id="ligacaorodaA1e" translation="-3.91 -2.12 -0.345" scale="0.12 3.05 0.12" rotation="0 0 1 2.35">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="ligacaorodaA2e" scale="0.12 0.115 0.13" translation="-2.825 -1.03 -0.35">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+
+              <transform id="ligacaorodaA3e" translation="-2.5 -0.8 -0.2" rotation="0 0 1 2.2">
+                <transform scale="0.12 0.85 0.12" rotation="1 0 0 -0.4">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="ligacaorodaA4e" translation="-3.65 -3.02 -0.34" scale="0.12 2.7 0.12" rotation="0 0 1 1.67">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="ligacaorodaA5e" translation="-2 -2.75 -0.2" rotation="0 0 1 2">
+                <transform scale="0.12 0.8 0.12" rotation="1 0 0 -0.4">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="ligacaorodaA6e" scale="0.2 0.12 0.13" translation="-2.32 -2.89 -0.342">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+
+              <transform id="cabagem1" translation="1.2 0.18 0" rotation="0 1 0 -0.75">
+                <transform scale="0.03 0.03 0.03" rotation="1 0 1 1.8">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaCircGrossaCor">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="cabagem2" translation="-1 -0.45 0" rotation="0 1 0 -0.75">
+                <transform scale="0.03 0.03 0.03" rotation="1 0 1 1.8">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaCircGrossaCor">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="cabagem3" translation="-2.6 -1 -0.25" rotation="0 1 0 -0.75">
+                <transform scale="0.03 0.03 0.03" rotation="1 0 1 1.8">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaCircGrossaCor">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+
+            </transform>
+
+
+
+            <transform id="selim" translation="-2.15 -0.4 0" rotation="0 0 1 0.25">
+
+
+              <transform id="cilinPrincipal" scale="0.12 1.8 0.12">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="mont" translation="-0.1 0.85 0" rotation="0 1 0 2.4">
+                <transform scale="0.1 0.07 0.1" rotation="1 0 1 -0.5">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaCircGrossaCor">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="parafusoSelim1" scale="0.04 0.3 0.04" translation="-0.15 0.8 0" rotation="1 0 0 1.57">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                  </appearance>
+                  <x3dgeometrynode use="esfera">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="banco" translation="-0.7 0.85 0" rotation="0 1 0 1.57">
+                <transform rotation="1 0 0 1.70">
+                  <Shape>
+                    <Appearance>
+                    <twosidedmaterial diffuseColor='black'/>
+                    </Appearance>
+                    <x3dgeometrynode use="bancoSelim">
+                    </x3dgeometrynode>
+                  </Shape>
+                </transform>
+              </transform>
+
+
+            </transform>
+
+
+
+            <transform id="pedaldireito" translation="-1.55 -2.6 0.425" rotation="0 0 1 -2.5">
+
+
+              <transform id="ligacao" scale="0.14 0.15 0.14" rotation="1 0 0 1.57">
+                <shape>
+                  <appearance>
+                    <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="metal" translation="0 -0.75 0.03" scale="0.68 0.06 0.035" rotation="0 0 1 1.57">
+                <shape>
+                  <appearance>
+                    <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                </Material>
+                  </appearance>
+                  <x3dgeometrynode use="caixa">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="pedaisx" translation="0 -1.34 0">
+
+                <transform id="pedais">
+
+                  <transform id="pedal1" translation="-0.23 0 0.5" rotation="0 0 1 1.57">
+                    <transform scale="0.06 0.4 0.05" rotation="1 0 0 1.57">
+                      <shape>
+                        <appearance>
+                          <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                        </appearance>
+                        <x3dgeometrynode use="caixa">
+                        </x3dgeometrynode>
+                      </shape>
+                    </transform>
+                  </transform>
+
+                  <transform id="pedal2" translation="0 0 0.07" scale="0.06 0.27 0.05" rotation="0 0 1 1.57">
+                      <shape>
+                        <appearance>
+                          <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                        </appearance>
+                        <x3dgeometrynode use="caixa">
+                        </x3dgeometrynode>
+                      </shape>
+                  </transform>
+
+                  <transform id="pedal3" translation="0 0 0.5" rotation="0 0 1 1.57">
+                    <transform scale="0.06 0.45 0.05" rotation="1 0 0 1.57">
+                      <shape>
+                        <appearance>
+                          <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                        </appearance>
+                        <x3dgeometrynode use="caixa">
+                        </x3dgeometrynode>
+                      </shape>
+                    </transform>
+                  </transform>
+
+                  <transform id="pedal4" translation="0.23 0 0.5" rotation="0 0 1 1.57">
+                    <transform scale="0.06 0.45 0.05" rotation="1 0 0 1.57">
+                      <shape>
+                        <appearance>
+                          <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                        </appearance>
+                        <x3dgeometrynode use="caixa">
+                        </x3dgeometrynode>
+                      </shape>
+                    </transform>
+                  </transform>
+
+                  <transform id="pedal5" translation="0 0 0.9" scale="0.06 0.27 0.05" rotation="0 0 1 1.57">
+                      <shape>
+                        <appearance>
+                          <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                        </appearance>
+                        <x3dgeometrynode use="caixa">
+                        </x3dgeometrynode>
+                      </shape>
+                  </transform>
+
+                </transform>
+
+              </transform>
+
+              <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+              <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 0 1 -3.14159  0 0 1 -1.57079  0 0 1 0  0 0 1 1.57079  0 0 1 3.14159'></orientationInterpolator>
+           
+              <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+              <ROUTE fromNode='spinThings' fromField='value_changed' toNode='pedais' toField='set_rotation'></ROUTE>
+
+            </transform>
+
+      <!-- Animacao parte cinzenta -->
+
+            <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='1 0 0 0  0 0 1 -1.57079  0 0 1 -3.14159  0 0 1 -4.71239  0 0 1 -6.28317'></orientationInterpolator>
+         
+            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='pedaldireito' toField='set_rotation'></ROUTE>
+
+
+            <transform id="pedalesquerdo" rotation="0 0 1 0.7" translation="-1.55 -2.6 -0.425">
+              <transform rotation="0 1 0 3.14">
+
+
+                <transform id="ligacao" scale="0.14 0.15 0.14" rotation="1 0 0 1.57">
+                    <shape>
+                      <appearance>
+                        <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                </transform>
+
+                <transform id="metal" translation="0 -0.75 0.03" scale="0.68 0.06 0.035" rotation="0 0 1 1.57">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                        </Material>
+                      </appearance>
+                      <x3dgeometrynode use="caixa">
+                      </x3dgeometrynode>
+                    </shape>
+                </transform>
+
+                <transform id="pedaisx" translation="0 -1.34 0">
+
+                  <transform id="pedais">
+
+                    <transform id="pedal1" translation="-0.23 0 0.5" rotation="0 0 1 1.57">
+                      <transform scale="0.06 0.4 0.05" rotation="1 0 0 1.57">
+                        <shape>
+                          <appearance>
+                            <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                          </appearance>
+                          <x3dgeometrynode use="caixa">
+                          </x3dgeometrynode>
+                        </shape>
+                      </transform>
+                    </transform>
+
+                    <transform id="pedal2" translation="0 0 0.07" scale="0.06 0.27 0.05" rotation="0 0 1 1.57">
+                        <shape>
+                          <appearance>
+                            <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                          </appearance>
+                          <x3dgeometrynode use="caixa">
+                          </x3dgeometrynode>
+                        </shape>
+                    </transform>
+
+                    <transform id="pedal3" translation="0 0 0.5" rotation="0 0 1 1.57">
+                      <transform scale="0.06 0.45 0.05" rotation="1 0 0 1.57">
+                        <shape>
+                          <appearance>
+                            <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                          </appearance>
+                          <x3dgeometrynode use="caixa">
+                          </x3dgeometrynode>
+                        </shape>
+                      </transform>
+                    </transform>
+
+                    <transform id="pedal4" translation="0.23 0 0.5" rotation="0 0 1 1.57">
+                      <transform scale="0.06 0.45 0.05" rotation="1 0 0 1.57">
+                        <shape>
+                          <appearance>
+                            <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                          </appearance>
+                          <x3dgeometrynode use="caixa">
+                          </x3dgeometrynode>
+                        </shape>
+                      </transform>
+                    </transform>
+
+                    <transform id="pedal5" translation="0 0 0.9" scale="0.06 0.27 0.05" rotation="0 0 1 1.57">
+                        <shape>
+                          <appearance>
+                            <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                          </appearance>
+                          <x3dgeometrynode use="caixa">
+                          </x3dgeometrynode>
+                        </shape>
+                    </transform>
+
+                  </transform>
+
+                </transform>
+
+                <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+                <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 0 1 0  0 0 1 -1.57079  0 0 1 -3.14159  0 0 1 -4.71239  0 0 1 -6.28317'></orientationInterpolator>
+             
+                <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+                <ROUTE fromNode='spinThings' fromField='value_changed' toNode='pedais' toField='set_rotation'></ROUTE>
+
+              </transform>
+
+      <!-- Animacao parte cinzenta -->
+
+              <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+              <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 0 1 3.14159  0 0 1 1.57079  0 0 1 0  0 0 1 -1.57079  0 0 1 -3.14159'></orientationInterpolator>
+           
+              <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+              <ROUTE fromNode='spinThings' fromField='value_changed' toNode='pedalesquerdo' toField='set_rotation'></ROUTE>
+
+            </transform>
+
+
+
+            <transform id="peseiraTrasDireita" translation="-5.05 -3.15 1">
+
+
+              <transform id="peseiras">
+
+                <transform id="pecaprincipal" scale="0.1 0.85 0.1" rotation="1 0 0 1.57">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaPes">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso" translation="0 0 -0.36" rotation="1 0 0 1.57" scale="0.035 0.65 0.035">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="porca" translation="0 0 -0.1" rotation="1 0 0 1.57" scale="0.07 0.03 0.07">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="encaixe" translation="0 0 -0.4" rotation="1 0 0 1.57" scale="0.2 0.25 0.2">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+              </transform>
+
+
+            </transform>
+
+            <transform id="peseiraTrasEsquerda" translation="-5.05 -3.15 -1" rotation="1 0 0 3.14">
+
+
+              <transform>
+                <x3dgeometrynode use="peseiras">
+                </x3dgeometrynode>
+              </transform>
+
+
+            </transform>
+
+
+
+            <transform id="rodaTras" translation="-5.05 -3.15 0">
+
+              <transform id="roda">
+
+                <transform id="ligacaodir" translation="0 0 0.36" rotation="1 0 0 1.57" scale="0.1 0.09 0.1">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaodir2" translation="0 0 0.3" rotation="1 0 0 1.57" scale="0.2 0.02 0.2">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaoesq" translation="0 0 -0.36" rotation="1 0 0 1.57" scale="0.1 0.09 0.1">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaodes2" translation="0 0 -0.3" rotation="1 0 0 1.57" scale="0.2 0.02 0.2">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaomeio" translation="0 0 0" rotation="1 0 0 1.57" scale="0.07 0.72 0.07">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="pneu" rotation="1 0 0 1.57" scale="1.2 0.27 1.2">
+                  <shape>
+                    <appearance>
+                      <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                    </appearance>
+                    <x3dgeometrynode use="formaPneu">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="jante" rotation="1 0 0 1.57" scale="1.1 0.8 1.1">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaJante">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="pipo" translation="0 -2 0" scale="0.035 0.3 0.035">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="raios" translation="-0.1 1 0.13" rotation="1 0 0 -0.17">
+
+                  <transform id="raio" scale="0.006 2.2 0.006" rotation="0 0 1 0.1">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="raios1" translation="-0.4 1 -0.13" rotation="1 0 0 0.17">
+                  <transform rotation="0 0 1 0.1">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios2" translation="-0.55 0.9 0.13" rotation="1 0 0 -0.17">
+                  <transform rotation="0 0 1 0.4">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios3" translation="-0.83 0.75 -0.13" rotation="1 0 0 0.2">
+                  <transform rotation="0 0 1 0.55">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios4" translation="-0.8 0.55 0.13" rotation="1 0 0 -0.25">
+                  <transform rotation="0 0 1 0.85">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios5" translation="-1.1 0.4 -0.13" rotation="1 0 0 0.3">
+                  <transform rotation="0 0 1 0.95">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios6" translation="-1.1 0.2 0.15" rotation="1 0 0 -0.45">
+                  <transform rotation="0 0 1 1.18">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios7" translation="-1 -0 -0.15" rotation="0 0 1 1.4">
+                  <transform rotation="1 0 0 0.2">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios8" translation="-1.1 -0.13 0.13" rotation="0 0 1 1.69">
+                  <transform rotation="1 0 0 -0.21">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios9" translation="-1.1 -0.34 -0.12" rotation="0 0 1 1.85">
+                  <transform rotation="1 0 0 0.2">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios10" translation="-1 -0.55 0.11" rotation="0 0 1 2.1">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios11" translation="-0.8 -0.65 -0.12" rotation="0 0 1 2.23">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios12" translation="-0.55 -0.8 0.12" rotation="0 0 1 2.4">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios13" translation="-0.3 -1 -0.12" rotation="0 0 1 2.6">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios14" translation="-0.1 -1 0.12" rotation="0 0 1 2.9">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios15" translation="0.1 -1 -0.12" rotation="0 0 1 3.2">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios16" translation="0.3 -0.95 0.12" rotation="0 0 1 3.45">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios17" translation="0.5 -0.9 -0.12" rotation="0 0 1 3.7">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios18" translation="0.6 -0.7 0.12" rotation="0 0 1 3.9">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios19" translation="0.75 -0.5 -0.12" rotation="0 0 1 4.15">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios20" translation="0.9 -0.3 0.12" rotation="0 0 1 4.3">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios21" translation="0.9 -0.1 -0.12" rotation="0 0 1 4.5">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios22" translation="0.9 0.1 0.12" rotation="0 0 1 4.7">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios23" translation="0.9 0.3 -0.12" rotation="0 0 1 4.9">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios24" translation="0.9 0.6 0.12" rotation="0 0 1 5">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios25" translation="0.7 0.7 -0.12" rotation="0 0 1 5.25">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios26" translation="0.55 0.7 0.12" rotation="0 0 1 5.55">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios27" translation="0.4 0.8 -0.12" rotation="0 0 1 5.7">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios28" translation="0.2 1 0.12" rotation="0 0 1 5.9">
+                  <transform rotation="1 0 0 -0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+                <transform id="raios29" translation="0 1 -0.12" rotation="0 0 1 6.1">
+                  <transform rotation="1 0 0 0.17">
+                    <x3dgeometrynode use="raio">
+                    </x3dgeometrynode>
+                  </transform>
+                </transform>
+
+              </transform>
+              <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+              <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='1 0 0 0  0 0 1 -1.57079  0 0 1 -3.14159  0 0 1 -4.71239  0 0 1 -6.28317'></orientationInterpolator>
+           
+              <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+              <ROUTE fromNode='spinThings' fromField='value_changed' toNode='roda' toField='set_rotation'></ROUTE>
+
+
+            </transform>
+
+
+
+            <transform id="volanteERoda" translation="2.175 0.35 0">
+
+
+
+              <transform id="volante" rotation="0 0 1 0.2">
+
+
+                <transform id="cilinPrinc" scale="0.14 1.8 0.14">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                        </Material>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                </transform>
+
+                <transform id="ligacaoRodaF1d" scale="0.1 1 0.1" translation="0 -0.82 0.16" rotation="1 0 0 2.8">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaoRodaF1e" scale="0.1 1 0.1" translation="0 -0.82 -0.16" rotation="1 0 0 -2.8">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                        </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaoRodaF2e" scale="0.1 2.2 0.1" translation="0 -2.35 -0.321">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+              </transform>
+
+                <transform id="ligacaoTriE" translation="0.22 -3.2 -0.33" rotation="0 0 1 1.57">
+                  <transform scale="1.7 0.03 2.2" rotation="1 0 0 1.57">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                        </Material>
+                      </appearance>
+                      <x3dgeometrynode use="formaTri">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="ligacaoRodaF2d" scale="0.1 2.2 0.1" translation="0 -2.35 0.321">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                        </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="ligacaoTriD" translation="0.22 -3.2 0.33" rotation="0 0 1 1.57">
+                  <transform scale="1.7 0.03 2.2" rotation="1 0 0 1.57">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#008B8B' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                        </Material>
+                      </appearance>
+                      <x3dgeometrynode use="formaTri">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="conexao" scale="0.2 0.33 0.2" translation="0 0.62 0">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="conexao1" scale="0.22 0.08 0.22" translation="0 0.6 0">
+                  <shape>
+                    <appearance>
+                      <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="conexao2" scale="0.34 0.12 0.27" translation="0.12 0.87 0">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="caixa">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="conexao3" scale="0.15 0.12 0.27" translation="0.31 1.14 0">>
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="caixa">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador" scale="0.08 1 0.08" translation="0.31 1  0" rotation="1 0 0 1.57">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador1" scale="0.08 0.8 0.08" translation="0.31 1.35 0.65" rotation="1 0 0 0.5">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador1" scale="0.09 0.09 0.09" translation="0.31 1 0.45">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador2" scale="0.08 0.8 0.08" translation="0.31 1.35 -0.65" rotation="1 0 0 2.6">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador2" scale="0.09 0.09 0.09" translation="0.31 1 -0.45">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador3" scale="0.08 1.2 0.08" translation="0.31 2.25 -0.98" rotation="1 0 0 2.9">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador3" scale="0.08 0.08 0.08" translation="0.31 1.67 -0.85">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador4" scale="0.08 1.2 0.08" translation="0.31 2.25 0.98" rotation="1 0 0 -2.9">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador4" scale="0.08 0.08 0.08" translation="0.31 1.67 0.85">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso1" translation="0.4 1.15  0.23" scale="0.03 0.25 0.03">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso2" translation="0.2 1.15  0.23" scale="0.03 0.25 0.03">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso3" translation="0.4 1.15  -0.23" scale="0.03 0.25 0.03">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso4" translation="0.2 1.15 -0.23" scale="0.03 0.25 0.03">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso5" translation="-0.15 0.88  0.23" scale="0.03 0.25 0.03">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="parafuso6" translation="-0.15 0.88  -0.23" scale="0.03 0.25 0.03">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                </transform>
+
+                <transform id="guiador5" scale="0.08 0.3 0.08" translation="0.31 2.85 1.25" rotation="1 0 0 1.3">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador5" scale="0.08 0.08 0.08" translation="0.31 2.82 1.1">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador6" scale="0.08 0.3 0.08" translation="0.31 2.85 -1.25" rotation="1 0 0 1.75">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador6" scale="0.08 0.08 0.08" translation="0.31 2.82 -1.1">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="esfera">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="guiador7e" translation="0.27 2.9 -1.77" rotation="1 0 0 1.64">
+                  <transform scale="0.09 0.9 0.09" rotation="0 0 1 -0.1">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="guiador7d"  translation="0.27 2.9 1.77" rotation="1 0 0 -1.64">
+                  <transform scale="0.09 0.9 0.09" rotation="0 0 1 -0.1">
+                    <shape>
+                      <appearance>
+                        <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="punhodir" translation="0.27 2.9 1.755" rotation="1 0 0 1.5">
+                  <transform scale="0.12 0.9 0.12" rotation="0 0 1 0.1">
+                    <shape>
+                      <appearance>
+                        <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="punhodir1" scale="0.18 0.06 0.18" translation="0.31 2.88 1.3" rotation="1 0 0 1.5">
+                  <shape>
+                    <appearance>
+                      <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="punhoesq" translation="0.27 2.9 -1.755" rotation="1 0 0 1.64">
+                  <transform scale="0.12 0.9 0.12" rotation="0 0 1 -0.1">
+                    <shape>
+                      <appearance>
+                        <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                      </appearance>
+                      <x3dgeometrynode use="cilindro">
+                      </x3dgeometrynode>
+                    </shape>
+                  </transform>
+                </transform>
+
+                <transform id="punhoesq1" scale="0.18 0.06 0.18" translation="0.31 2.88 -1.3" rotation="1 0 0 1.64">
+                  <shape>
+                    <appearance>
+                      <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="pecacent" scale="0.08 1.85 0.08" translation="0.31 2.2 0" rotation="1 0 0 1.57">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                    </shape>
+                  </transform>
+
+
+              </transform>
+
+
+              <transform id="rodaFrente" translation="0.95 -3.25 0.02">
+
+
+                <transform>
+                  <x3dgeometrynode use="roda">
+                      </x3dgeometrynode>
+                </transform>
+
+
+              </transform>
+
+              <transform id="peseiraFrenteDireita" translation="0.95 -3.25 1">
+
+
+              <transform id="peseirasFre">
+
+                <transform id="pecaprincipal" scale="0.1 0.85 0.1" rotation="1 0 0 1.57">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                                  </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaPes">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform >
+
+                <transform id="parafuso" translation="0 0 -0.36" rotation="1 0 0 1.57" scale="0.035 0.65 0.035">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="porca" translation="0 0 -0.1" rotation="1 0 0 1.57" scale="0.07 0.03 0.07">
+                  <shape>
+                    <appearance>
+                      <Material  diffuseColor='#D3D3D3' shininess='1.5' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+                <transform id="encaixe" translation="0 0 -0.4" rotation="1 0 0 1.57" scale="0.2 0.25 0.2">
+                  <shape>
+                    <appearance>
+                      <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+
+              </transform>
+
+
+            </transform>
+
+
+
+            <transform id="peseiraFreEsquerda" translation="0.95 -3.25 -1" rotation="1 0 0 3.14">
+
+
+              <transform>
+                <x3dgeometrynode use="peseirasFre">
+                    </x3dgeometrynode>
+              </transform>
+
+
+            </transform>
+
+
+            </transform>
+
+
+           <timeSensor DEF='clock' cycleInterval='4' loop="true"></timeSensor>
+
+            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 -0.3  0 1 0 0  0 1 0 0.3  0 1 0 0'></orientationInterpolator>
+         
+            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='volanteERoda' toField='set_rotation'></ROUTE> 
+
+
+
+            <transform id="sistemaCorrenteCentral" translation="-1.55 -2.6 -0.37">
+
+
+              <transform id="ligacaoPrinc" rotation="1 0 0 1.57" scale="0.3 0.08 0.3">
+                <shape>
+                  <appearance>
+                    <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="rect1" rotation="1 0 0 1.57" scale="0.08 0.04 0.11" translation="0 0.35 0">
+                <shape>
+                  <appearance>
+                    <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="caixa">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="rect2" rotation="1 0 0 1.57" scale="0.08 0.04 0.11" translation="0 -0.35 0">
+                <shape>
+                  <appearance>
+                    <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="caixa">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <transform id="rect3" rotation="1 0 0 1.57" translation="0.32 0.2 0">
+                <transform rotation="0 1 0 -0.9" scale="0.08 0.04 0.11">
+                  <shape>
+                    <appearance>
+                     <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="caixa">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="rect4" rotation="1 0 0 1.57" translation="-0.32 0.2 0">
+                <transform rotation="0 1 0 0.9" scale="0.08 0.04 0.11">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="caixa">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="rect5" rotation="1 0 0 1.57" translation="0.32 -0.2 0">
+                <transform rotation="0 1 0 0.9" scale="0.08 0.04 0.11">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="caixa">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="rect6" rotation="1 0 0 1.57" translation="-0.32 -0.2 0">
+                <transform rotation="0 1 0 -0.9" scale="0.08 0.04 0.11">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="caixa">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="circ" rotation="1 0 0 1.57">
+                <transform scale="0.25 0.065 0.25">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaPneu">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="circCorrente" rotation="1 0 0 1.57" translation="0 0 0.1">
+                <transform scale="0.22 0.07 0.22">
+                  <shape>
+                    <appearance>
+                     <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaPneu">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+              <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='1 0 0 0  0 0 1 -1.57079  0 0 1 -3.14159  0 0 1 -4.71239  0 0 1 -6.28317'></orientationInterpolator>
+           
+              <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+              <ROUTE fromNode='spinThings' fromField='value_changed' toNode='sistemaCorrenteCentral' toField='set_rotation'></ROUTE>
+
+
+            </transform>
+
+
+
+            <transform id="sitemaCorrenteTraseiro" translation="-5.05 -3.15 -0.37">
+
+
+              <transform id="peca" rotation="1 0 0 1.57" scale="0.2 0.08 0.2">
+                <shape>
+                  <appearance>
+                    <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                    </Material>
+                  </appearance>
+                  <x3dgeometrynode use="cilindro">
+                  </x3dgeometrynode>
+                </shape>
+              </transform>
+
+              <timeSensor DEF='clock' cycleInterval='1.5' loop='true'></timeSensor>
+
+              <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='1 0 0 0  0 0 1 -1.57079  0 0 1 -3.14159  0 0 1 -4.71239  0 0 1 -6.28317'></orientationInterpolator>
+           
+              <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+
+              <ROUTE fromNode='spinThings' fromField='value_changed' toNode='sitemaCorrenteTraseiro' toField='set_rotation'></ROUTE>
+
+
+            </transform>
+
+
+
+            <transform id="corrente" translation="-1.55 -2.6 -0.275">
+
+
+              <transform id="peca1" rotation="1 0 0 1.57">
+                <transform rotation="0 1 0 1.57" scale="0.26 0.08 0.26">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaCorr">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="peca2" rotation="0 0 1 1.79" translation="-1.75 0.08 0.04">
+                <transform rotation="1 0 0 -0.03" scale="0.025 3.7 0.025">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="peca3" rotation="1 0 0 1.57" translation="-3.51 -0.55 -0.1">
+                <transform rotation="0 1 0 -1.57" scale="0.12 0.08 0.12" >
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="formaCorr">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+              <transform id="peca4" rotation="0 0 1 -1.5" translation="-1.75 -0.63 -0.05">
+                <transform rotation="1 0 0 0.03" scale="0.025 3.6 0.025">
+                  <shape>
+                    <appearance>
+                      <Material ambientIntensity='1' diffuseColor='black' shininess='1' specularColor='0.7 0.7 0.7'>
+                      </Material>
+                    </appearance>
+                    <x3dgeometrynode use="cilindro">
+                    </x3dgeometrynode>
+                  </shape>
+                </transform>
+              </transform>
+
+
+            </transform>
+
+
+
+          </transform>
+
+          <transform id="chao" translation="0 -5.7 0" rotation="0 1 0 -0.5" >
+
+
+            <transform scale="10 0.3 10" rotation="0 0 1 0.03">
+              <shape>
+                <appearance>
+                  <ImageTexture url="../media/GroundTexture.jpg"/>
+                </appearance>
+                <x3dgeometrynode use="caixa">
+                </x3dgeometrynode>
+              </shape>
+            </transform>
+
+          </transform>
+
+     	</transform>
+
+
+
+          <TimeSensor DEF='Clock' cycleInterval='30' loop='true'></TimeSensor>
+          <OrientationInterpolator DEF='ColumnPath' key='0.0 0.50 1.0' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'></OrientationInterpolator>
+       </Group> 
+      <ROUTE fromNode='Clock' fromField='fraction_changed' toNode='ColumnPath' toField='set_fraction'></ROUTE>
+      <ROUTE fromNode='ColumnPath' fromField='value_changed' toNode='Space' toField='set_rotation'></ROUTE>
+
+
+      <Background groundColor='0 0 0' skyAngle='3.14 1.59' skyColor='0 0.2 0.7 0 0.5 1 1 1 1'/> 
+
+    </scene>
+</X3D>

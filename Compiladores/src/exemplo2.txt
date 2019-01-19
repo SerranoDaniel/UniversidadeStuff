@@ -1,0 +1,18 @@
+fact (n: int) : int {
+  f, i : int = 1;
+  
+  while i <= n then {
+    f=f*i;
+    i=i+1;
+  };
+  
+  return f;
+};
+
+main () : void {
+  x : int;
+  print("Introduza_x");
+  input(x);
+  print("Print_de_x");
+  print(x);
+};

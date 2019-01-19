@@ -1,0 +1,23 @@
+1- Check the IP ADRESS of host www.uevora.pt"
+
+	DanielSerrano@DESKTOP-6SR5JOJ:/mnt/c/Users/danas$ host www.uevora.pt
+	www.uevora.pt is an alias for arachne.uevora.pt.
+resposta: arachne.uevora.pt has address 193.136.216.21  
+	arachne.uevora.pt has IPv6 address 2001:690:2006:200::21
+
+2- Check if that host is alive on the network
+
+	DanielSerrano@DESKTOP-6SR5JOJ:/mnt/c/Users/danas$: ping www.uevora.pt
+	PING arachne.uevora.pt (193.136.216.21) 56(84) bytes of data.	
+	64 bytes from arachne.uevora.pt (193.136.216.21): icmp_seq=1 ttl=62 time=2.44 ms
+	64 bytes from arachne.uevora.pt (193.136.216.21): icmp_seq=2 ttl=62 time=5.98 ms
+	64 bytes from arachne.uevora.pt (193.136.216.21): icmp_seq=3 ttl=62 time=4.00 ms
+	64 bytes from arachne.uevora.pt (193.136.216.21): icmp_seq=4 ttl=62 time=41.0 ms
+	^C
+	--- arachne.uevora.pt ping statistics ---
+	4 packets transmitted, 4 received, 0% packet loss, time 3002ms
+	rtt min/avg/max/mdev = 2.447/13.380/41.088/16.046 ms
+
+3- What is the network latency between your host and www.uevora.pt
+	
+4- " " " " " www.google.com

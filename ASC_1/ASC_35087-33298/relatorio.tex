@@ -1,0 +1,51 @@
+\documentclass[11pt]{article} 
+
+\usepackage[a4paper, total={16cm, 24cm}]{geometry}
+\usepackage[english]{babel}  
+\usepackage{graphicx}           % graficos
+\usepackage{amsmath}            % matematica
+\usepackage{tikz}               % diagramas
+\usepackage{booktabs}           % tabelas com  melhor aspecto
+\usepackage{hyperref}          
+\usepackage{listings}           
+    \renewcommand\lstlistingname{Listagem}  % Listing em portugues
+    \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, basicstyle=\footnotesize\ttfamily, frame=tb,rulesepcolor=\color{gray}, breaklines=true}
+
+% ----------------------------------------------------------------------------
+\title{Relatório do trabalho de ASC1}
+\author{Daniel Serrano - nº 35087 \\ Carlos Valente - nº 33298}
+% ----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+%===========================================================================
+\section{Resumo}
+
+Com este trabalho pretendemos com a criacao de funções em Mips assembly detetar contronos em imagens a cores, sendo que é dada uma imagem em RGB e será completamente alterada para tons de cinzentos e com tracos escuros nos locais onde foram detatados os contornos.
+
+\section{Funcao "read-rgb-image"}
+
+Esta funcao apenas serve para introduzir a imagem RGB dada pelo utilizador num buffer (BufferRGB) para que mais tarde possa ser utilizada no programa.
+
+
+\section{Funcao "rgb-to-gray"}
+
+Esta funcao recebe o buffer com a imagem rgb e recebe ainda outro (BufferGray) que se encontra vazio no incio da função.
+Na funcao encontra-se um loop que corre toda a imagem que está no BufferRGB e multiplica byte a byte por certors valores (0,30; 0,59; 0,11) de modo a tornar a imagem a preto e branco. Os bytes alterados são então guardados no BufferGray.
+
+\section{Funcao "write-to-gray"}
+
+Esta funcao serve para abrir um ficheiro cujo o nome é enviado para a função (a0) e escrever neste o conteudo que é enviado para a função no a1.
+
+\section{Funcao "convolution"}
+
+Esta funcao é chamada 2 vezes no main pois sao utilizadas duas matrizes.
+A funcao recebe uma imagem que neste caso é a imagem contida no BufferGray e um Buffer que contem uma matriz Sobel (Horizontal ou vertical). 
+Dentro da função encontra-se um loop que inicia com a leitura do byte numero 514 (pos 513) que é o primeiro byte da imagem que se encontra fora das margem e neste byte recua 513bytes para que o byte superior esquerdo seja multiplicado pelo primeiro valor da matriz sobel, e repete o procedimento para as restantes posicoes da matriz. No final deste processo adiciona todoso os valores obtidos, torna-os positivos, divide essa soma por 4 e guarda-os no Buffer designado da imagem para o Sobel. O loop continua percorrendo todas as posições, mas se chegar a uma margem que por ventura e controlada pelo t4, salta para a sub função "margem" que tem como função adicionar 2 posicoes para que troque de linha e saiada da margem esquerda e volta para o loop principal. O fim deste loop acontece quando é a tingida a ultima posição que neste caso está a ser controlada pelo registo t5. Ao terminar o loop volta para o main.
+
+\section{Funcao "contour"}
+
+A ultima funcao do programa que recebe os dois Buffers com as imagens alteradas pelos sobel e que deteta os contronos das mesmas.
+A funcao contem um loop "contornos" que vai adicionar byte a byte cada byte das imagens dos buffer sobel e vai dividir essa soma por 2, e subtrair o valor 255 pela divisao dessa soma. Guarda entao esse valor no Buffer respetivo que neste caso sera correspondente à imagem final. O loop terminará quando todas as posicoes forem percorridas, sendo que isso será controlado pelo registo t3 e pelo registo (contador) t3.
+
+
+\end{document}

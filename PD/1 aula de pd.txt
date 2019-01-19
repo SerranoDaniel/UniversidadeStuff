@@ -1,0 +1,7 @@
+0 par
+X par se X-2 for par
+
+-------------
+
+q(0).
+q(x) :- q(Y), X is Y+2

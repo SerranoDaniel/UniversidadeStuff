@@ -1,0 +1,10 @@
+2-> prefixos 24 num prefixo 17?
+	2 ^(24 - 17 - 1) = 2^6 = 64
+	-1 para obter um prefixo e nao um endereço ip
+
+
+4-> range: 192.168.0. X
+
+	X = 4 bits, ou seja: 1111 = 15 
+
+	logo: apenas o d) está contido

@@ -1,0 +1,308 @@
+
+###########################
+ ####  MENU PRINCIPAL ####
+###########################
+
+      ### Linetris ###
+
+    0 - Sair
+    1 - Humano vs Humano
+    2 - Humano vs AI
+
+Insira o número correspondente à opção:
+1
+
+Insira as dimensões N e M (NxM):
+
+N (>=4)? 
+6
+
+M (>=4)? 
+4
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+1
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | - | - | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+1
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | v | - | - | - | 
+
+      | p | - | - | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+2
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | v | - | - | - | 
+
+      | p | p | - | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+3
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | v | - | - | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+2
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | v | p | - | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+1
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | v | - | - | - | 
+
+      | v | p | - | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+1
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | - | - | - | 
+
+      | v | - | - | - | 
+
+      | v | p | - | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+2
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | - | - | - | 
+
+      | v | v | - | - | 
+
+      | v | p | - | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+3
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | - | - | - | 
+
+      | v | v | - | - | 
+
+      | v | p | p | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+2
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | v | - | - | 
+
+      | v | v | - | - | 
+
+      | v | p | p | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+5
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | v | - | - | 
+
+      | v | v | - | - | 
+
+      | v | p | p | - | 
+
+      | p | p | v | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+4
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | v | - | - | 
+
+      | v | v | - | - | 
+
+      | v | p | p | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+3
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | v | - | - | 
+
+      | v | v | v | - | 
+
+      | v | p | p | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+3
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | v | p | - | 
+
+      | v | v | v | - | 
+
+      | v | p | p | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+4
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | v | p | - | 
+
+      | v | v | v | - | 
+
+
+Jogador 1 insira a coluna onde jogar: 
+1
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | - | - | - | 
+
+      | p | v | p | - | 
+
+      | v | v | v | - | 
+
+
+Jogador 2 insira a coluna onde jogar: 
+4
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | - | - | - | - | 
+
+      | p | - | - | - | 
+
+      | p | v | p | - | 
+
+      | v | v | v | v | 
+
+
+O vencedor é: Jogador 2

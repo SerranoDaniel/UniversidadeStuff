@@ -1,0 +1,17 @@
+import javax.swing.JFrame;
+
+
+public class Test {
+	private JFrame frame;
+	
+	public void buildFrame(){
+		frame.setSize(500,500);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		Test test = new Test();
+		test.buildFrame();
+	}
+}

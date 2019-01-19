@@ -1,0 +1,170 @@
+(* fib*)
+let rec fib x = if x<=1 
+    then 1 
+    else fib (x-1) + fib(x-2);;
+
+
+(* fact*)
+let rec fact x = if x<=1 
+    then 1 
+    else x * fact(x-1);;
+
+
+(* sort e insert*)
+let rec insert elem = function
+	| [] -> [elem]
+	| h::t -> if elem < h 
+        then elem::h::t 
+        else h::insert elem t;;
+
+
+let rec sort = function
+	| [] -> []
+	| h::t -> insert h (sort t);;
+
+
+(* reverse list *)
+let rev list =
+	let rec aux acc = function
+	| [] -> acc
+	| h::t -> aux (h::acc) t in aux [] list;;
+
+
+(*99 problems*)
+let rec last_two = function
+	| [] -> []
+	| [x;y] -> [x;y]
+	| _::t -> last_two t;;
+
+
+let rec at k = function
+	| [] -> None
+	| h::t -> if k=1 
+        then Some h
+        else at (k-1) t;;
+
+let length list = 
+	let rec aux n = function
+		| [] -> n
+		| _::t -> aux (n+1) t in aux 0 list;;
+
+(*last elemento*)
+let rec last = function
+	| [] -> []
+	| [x] -> [x]
+	| _::t -> last t;;
+
+
+let rec merge l1 l2 = match l1 with
+	| [] -> l2
+	| h::t -> h::(merge l2 t);;
+    
+
+(* soma com match .. with*)
+let rec soma l = match l with
+	| [] -> 0
+	| h::t -> h + soma t;;
+
+
+let empty = function
+	| [] -> true
+	| h::t -> false;;
+
+
+let rec membro = function 
+	[] -> (function a -> false)
+	| x::l -> (function a -> 
+		if x = a then true
+		else membro l a);;
+
+
+let apl1 f = function
+	| x -> (f x);;
+
+
+let apl2 f = function
+	| x -> (f x) + (f x);;
+
+
+let rec apl k f = function
+	| x -> if k=1 
+			then (f x) 
+			else apl (k-1) f x;;
+
+
+(* greatest common divisor *)
+let rec gcd m = function
+	| 0 -> m
+	| n -> gcd n (m mod n);;
+
+
+let rec gcd m n = if n=0 
+	then m 
+	else gcd n (m mod n);;
+
+let rec soma = function 
+    [] -> 0 
+    | x::l -> x + soma l;;
+
+
+(* exerccio 1.1 *)
+let rec paresList = function 
+    [] -> [] 
+    | x::l -> if x mod 2 = 0 
+            then x::(paresList l) 
+            else paresList l;;
+
+
+(* exerccio 1.2 *)
+let rec filtList filt  = function
+    [] -> [] 
+    | x::l -> if filt x 
+        then x::(filtList filt l) 
+        else filtList filt l;;
+
+
+ exerccio 2 
+let rec append = function 
+  | [] -> (function x -> x)
+  | x::xs -> (function 
+  | l -> x::append xs l);;
+
+  let rec append l1 l2 = match l1 with
+  | [] -> l2
+	|  h::t -> h::(append t l2);;~
+		
+
+ABPS
+
+type 'a abp =
+	| Leaf
+	| Node of 'a abp * 'a * 'a abp;;
+
+let rec lookup = function
+	| Leaf -> assert false
+	| Node (_, x, Leaf) -> x
+	| Node (_, x, r) -> lookup r;;
+
+let rec insert x = function
+	| Leaf -> Node (Leaf, x, Leaf)
+	| Node (l, y, r) ->
+		if x=y 
+			then Node (l, y, r)
+		else if x<y 
+			then Node (insert x l, y, r)
+		else Node (l, y, insert x r);;
+
+let rec delete x = function
+	| Leaf -> Leaf
+	| Node (l, y, r) ->
+		if x = y 				
+            then join l r
+		else if x < y 
+			then Node (delete x l, y, r)
+		else Node (l, y, delete x r)
+
+and join l r =	match l, r with
+	| Leaf, r -> r
+	| l, Leaf -> l
+	| l, r -> let m = find_max l in Node (delete m l, m, r);;
+

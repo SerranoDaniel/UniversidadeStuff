@@ -1,0 +1,1 @@
+Na classe "Loader" deve alterar o caminho do ficheiro txt que contem um tabuleiro já criado.

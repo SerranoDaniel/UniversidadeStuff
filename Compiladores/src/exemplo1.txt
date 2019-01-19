@@ -1,0 +1,16 @@
+a : int = 0;
+define x void;
+b : string = "ola";
+k:void;
+
+f (b: int) : void {
+  print(b);
+};
+
+main () : void {
+  a : bool = true;
+  if a<b then {
+    b = "helloworld";
+    f(b);
+  };
+};

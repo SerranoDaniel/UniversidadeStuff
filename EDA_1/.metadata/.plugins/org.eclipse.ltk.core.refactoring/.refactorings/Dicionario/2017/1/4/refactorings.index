@@ -1,0 +1,13 @@
+1485265919614	Delete element
+1485268403852	Rename field 'elemento'
+1485268411728	Rename field 'ativo'
+1485455482356	Rename method 'ocupados'
+1485455495519	Rename method 'busy'
+1485455509488	Rename method 'isbusy'
+1485455525447	Rename method 'vazia'
+1485455538001	Rename method 'cheio'
+1485455586198	Rename method 'tamanho'
+1485455606231	Rename method 'tornarVazia'
+1485455617765	Rename method 'procurarValor'
+1485462055090	Rename type 'Read'
+1485612685535	Delete element

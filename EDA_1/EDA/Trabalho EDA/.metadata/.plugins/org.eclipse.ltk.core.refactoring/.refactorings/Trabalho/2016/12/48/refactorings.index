@@ -1,0 +1,5 @@
+1480624880777	Rename field 'head'
+1480811376693	Rename field 'prev'
+1480811388516	Rename field 'next'
+1480877845202	Rename method 'insertTree'
+1480882312296	Rename method 'getTail'

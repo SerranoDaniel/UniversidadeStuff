@@ -1,0 +1,13 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,net.sf.eclipsefp.haskell.haddock,0.10.0,net.sf.eclipsefp.haskell.haddock,1474890105787
+stopped,bundle,net.sf.eclipsefp.haskell.hugs,0.10.0,net.sf.eclipsefp.haskell.hugs,1474890105787
+stopped,bundle,net.sf.eclipsefp.haskell.core.jparser,0.10.0,net.sf.eclipsefp.haskell.core.jparser,1474890105787
+stopped,bundle,net.sf.eclipsefp.haskell.ui,0.10.0,net.sf.eclipsefp.haskell.ui,1474890105787
+stopped,bundle,net.sf.eclipsefp.common.ui,0.10.0,net.sf.eclipsefp.common.ui,1474890105787
+stopped,bundle,org.eclipse.dltk.console.ui,0.95.0.v20080526-1423,org.eclipse.dltk.console.ui,1474890105787
+stopped,bundle,net.sf.pfcdt,1.0.7.200902041148,net.sf.pfcdt,1474890105787
+stopped,bundle,org.eclipse.debug.ui,3.4.1.v20080811_r341,org.eclipse.debug.ui,1474890105787
+stopped,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.1.R34x_v20080818,org.eclipse.equinox.p2.ui.sdk,1474890105787
+stopped,bundle,org.eclipse.equinox.p2.ui,1.0.1.R34x_v20080909,org.eclipse.equinox.p2.ui,1474890105787
+stopped,bundle,org.eclipse.equinox.security.ui,1.0.0.v20080603-1810,org.eclipse.equinox.security.ui,1474890105787
+stopped,bundle,org.eclipse.cdt,5.0.2.200901300802,org.eclipse.cdt,1474890105787

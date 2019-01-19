@@ -1,0 +1,15 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.dltk.ruby.ui,0.95.1.v20080903-1434,org.eclipse.dltk.ruby.ui,1476387970247
+stopped,bundle,org.eclipse.dltk.ruby.activestatedebugger,0.95.0.v20080604-1628,org.eclipse.dltk.ruby.activestatedebugger,1476387970248
+stopped,bundle,org.eclipse.dltk.ruby.basicdebugger,0.95.1.v20080626-2043,org.eclipse.dltk.ruby.basicdebugger,1476387970249
+stopped,bundle,org.eclipse.dltk.ruby.fastdebugger,0.95.1.v20080903-1434,org.eclipse.dltk.ruby.fastdebugger,1476387970249
+stopped,bundle,org.eclipse.dltk.testing,0.95.0.v20080609-1540,org.eclipse.dltk.testing,1476387970250
+stopped,bundle,org.eclipse.dltk.debug.ui,0.95.1.v20080903-1434,org.eclipse.dltk.debug.ui,1476387970250
+stopped,bundle,org.eclipse.dltk.validators.ui,0.95.1.v20080707-1511,org.eclipse.dltk.validators.ui,1476387970250
+stopped,bundle,org.eclipse.dltk.ui,0.95.1.v20080920-R0951,org.eclipse.dltk.ui,1476387970250
+stopped,bundle,org.eclipse.search,3.4.1.r341_v20080813-0800,org.eclipse.search,1476387970251
+stopped,bundle,org.eclipse.ltk.ui.refactoring,3.4.1.r341_v20080716-0800,org.eclipse.ltk.ui.refactoring,1476387970251
+stopped,bundle,org.eclipse.team.cvs.ui,3.3.100.I20080604,org.eclipse.team.cvs.ui,1476387970251
+stopped,bundle,org.eclipse.team.svn.ui,0.7.3.I20080814-1500,org.eclipse.team.svn.ui,1476387970254
+stopped,bundle,org.eclipse.team.ui,3.4.1.r34x_20080827,org.eclipse.team.ui,1476387970255
+stopped,bundle,org.eclipse.compare,3.4.0.I20080604,org.eclipse.compare,1476387970255

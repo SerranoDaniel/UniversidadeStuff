@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;exercico2.Cinema.java&apos; to &apos;FilaDeEspera.java&apos;&#x0D;&#x0A;- Original project: &apos;Ficha 1&apos;&#x0D;&#x0A;- Original element: &apos;exercico2.Cinema.java&apos;&#x0D;&#x0A;- Renamed element: &apos;exercico2.FilaDeEspera.java&apos;" description="Rename compilation unit &apos;Cinema.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;exercico2{Cinema.java" name="FilaDeEspera.java" references="false" stamp="1475489962588" version="1.0"/>
+</session>
