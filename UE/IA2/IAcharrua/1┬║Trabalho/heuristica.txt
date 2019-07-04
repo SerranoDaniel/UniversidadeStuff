@@ -1,0 +1,5 @@
+Utilizámos para este trabalho uma função de heurística que funciona do seguinte modo:
+	 1ª heuristica (h1)- Encontra todos os caminhos bloqueados a partir da sala onde o Agente se encontra e retorna o valor dos mesmos.
+	 2ª heuristica (h2)- Recebendo o estado atual e o estado final calcula a diferença entre a coordenada X e a diferença entre a coordenada Y de ambos.
+	 				     De seguida retorna a soma das diferenças.
+	Após ter os 2 valores retornados, a função h(E,V) soma os dois valores de forma a escolher o próximo nó basedo no maior valor de V. 

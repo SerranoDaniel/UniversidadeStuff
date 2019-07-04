@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.4.  */
+/* A Bison parser, made by GNU Bison 3.0.2.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "3.0.4"
+#define YYBISON_VERSION "3.0.2"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -209,7 +209,7 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-
+typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
 #line 11 "yalang.y" /* yacc.c:355  */
@@ -232,8 +232,6 @@ struct ya_t_exp_ 		*ya_t_exp;
 
 #line 234 "parser.c" /* yacc.c:355  */
 };
-
-typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -247,7 +245,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 251 "parser.c" /* yacc.c:358  */
+#line 249 "parser.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1423,275 +1421,275 @@ yyreduce:
         case 3:
 #line 80 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decls) = ya_decls_one((yyvsp[0].ya_t_decl));}
-#line 1427 "parser.c" /* yacc.c:1646  */
+#line 1425 "parser.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 81 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decls) = ya_decls_more((yyvsp[-1].ya_t_decl), (yyvsp[0].ya_t_decls));}
-#line 1433 "parser.c" /* yacc.c:1646  */
+#line 1431 "parser.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 84 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decl) = ya_decl_idtype((yyvsp[-3].ya_t_ids), (yyvsp[-1].ya_t_type));}
-#line 1439 "parser.c" /* yacc.c:1646  */
+#line 1437 "parser.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 85 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decl) = ya_decl_assign((yyvsp[-5].ya_t_ids), (yyvsp[-3].ya_t_type), (yyvsp[-1].ya_t_exp));}
-#line 1445 "parser.c" /* yacc.c:1646  */
+#line 1443 "parser.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 86 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decl) = ya_decl_function((yyvsp[-8].id), (yyvsp[-4].ya_t_type), (yyvsp[-2].ya_t_stmts));}
-#line 1451 "parser.c" /* yacc.c:1646  */
+#line 1449 "parser.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 87 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decl) = ya_decl_argdefs((yyvsp[-9].id), (yyvsp[-7].ya_t_argdefs), (yyvsp[-4].ya_t_type), (yyvsp[-2].ya_t_stmts));}
-#line 1457 "parser.c" /* yacc.c:1646  */
+#line 1455 "parser.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 88 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_decl) = ya_decl_define((yyvsp[-2].id), (yyvsp[-1].ya_t_type));}
-#line 1463 "parser.c" /* yacc.c:1646  */
+#line 1461 "parser.c" /* yacc.c:1646  */
     break;
 
   case 10:
 #line 91 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_argdefs) = ya_argdefs_one((yyvsp[0].ya_t_argdef));}
-#line 1469 "parser.c" /* yacc.c:1646  */
+#line 1467 "parser.c" /* yacc.c:1646  */
     break;
 
   case 11:
 #line 92 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_argdefs) = ya_argdefs_more((yyvsp[-2].ya_t_argdef), (yyvsp[0].ya_t_argdefs));}
-#line 1475 "parser.c" /* yacc.c:1646  */
+#line 1473 "parser.c" /* yacc.c:1646  */
     break;
 
   case 12:
 #line 95 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_argdef) = ya_argdef_id((yyvsp[-2].id), (yyvsp[0].ya_t_type));}
-#line 1481 "parser.c" /* yacc.c:1646  */
+#line 1479 "parser.c" /* yacc.c:1646  */
     break;
 
   case 13:
 #line 98 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmts) = ya_stmts_one((yyvsp[0].ya_t_stmt));}
-#line 1487 "parser.c" /* yacc.c:1646  */
+#line 1485 "parser.c" /* yacc.c:1646  */
     break;
 
   case 14:
 #line 99 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmts) = ya_stmts_more((yyvsp[-1].ya_t_stmt), (yyvsp[0].ya_t_stmts));}
-#line 1493 "parser.c" /* yacc.c:1646  */
+#line 1491 "parser.c" /* yacc.c:1646  */
     break;
 
   case 15:
 #line 102 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_decl((yyvsp[0].ya_t_decl));}
-#line 1499 "parser.c" /* yacc.c:1646  */
+#line 1497 "parser.c" /* yacc.c:1646  */
     break;
 
   case 16:
 #line 103 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_exp((yyvsp[-2].id), (yyvsp[-1].ya_t_exp));}
-#line 1505 "parser.c" /* yacc.c:1646  */
+#line 1503 "parser.c" /* yacc.c:1646  */
     break;
 
   case 17:
 #line 104 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_assign((yyvsp[-3].id), (yyvsp[-1].ya_t_exp));}
-#line 1511 "parser.c" /* yacc.c:1646  */
+#line 1509 "parser.c" /* yacc.c:1646  */
     break;
 
   case 18:
 #line 105 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_if((yyvsp[-5].ya_t_exp), (yyvsp[-2].ya_t_stmts));}
-#line 1517 "parser.c" /* yacc.c:1646  */
+#line 1515 "parser.c" /* yacc.c:1646  */
     break;
 
   case 19:
 #line 106 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_ifelse((yyvsp[-9].ya_t_exp), (yyvsp[-6].ya_t_stmts), (yyvsp[-2].ya_t_stmts));}
-#line 1523 "parser.c" /* yacc.c:1646  */
+#line 1521 "parser.c" /* yacc.c:1646  */
     break;
 
   case 20:
 #line 107 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_while((yyvsp[-5].ya_t_exp), (yyvsp[-2].ya_t_stmts));}
-#line 1529 "parser.c" /* yacc.c:1646  */
+#line 1527 "parser.c" /* yacc.c:1646  */
     break;
 
   case 21:
 #line 108 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_return((yyvsp[-1].ya_t_exp));}
-#line 1535 "parser.c" /* yacc.c:1646  */
+#line 1533 "parser.c" /* yacc.c:1646  */
     break;
 
   case 22:
 #line 109 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_print((yyvsp[-1].ya_t_exp));}
-#line 1541 "parser.c" /* yacc.c:1646  */
+#line 1539 "parser.c" /* yacc.c:1646  */
     break;
 
   case 23:
 #line 110 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_stmt) = ya_stmt_input((yyvsp[-1].ya_t_exp));}
-#line 1547 "parser.c" /* yacc.c:1646  */
+#line 1545 "parser.c" /* yacc.c:1646  */
     break;
 
   case 24:
 #line 114 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_ids) = ya_ids_one((yyvsp[0].id));}
-#line 1553 "parser.c" /* yacc.c:1646  */
+#line 1551 "parser.c" /* yacc.c:1646  */
     break;
 
   case 25:
 #line 115 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_ids) = ya_ids_more((yyvsp[-2].id), (yyvsp[0].ya_t_ids));}
-#line 1559 "parser.c" /* yacc.c:1646  */
+#line 1557 "parser.c" /* yacc.c:1646  */
     break;
 
   case 26:
 #line 118 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_type) = ya_type_int();}
-#line 1565 "parser.c" /* yacc.c:1646  */
+#line 1563 "parser.c" /* yacc.c:1646  */
     break;
 
   case 27:
 #line 119 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_type) = ya_type_float();}
-#line 1571 "parser.c" /* yacc.c:1646  */
+#line 1569 "parser.c" /* yacc.c:1646  */
     break;
 
   case 28:
 #line 120 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_type) = ya_type_string();}
-#line 1577 "parser.c" /* yacc.c:1646  */
+#line 1575 "parser.c" /* yacc.c:1646  */
     break;
 
   case 29:
 #line 121 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_type) = ya_type_bool();}
-#line 1583 "parser.c" /* yacc.c:1646  */
+#line 1581 "parser.c" /* yacc.c:1646  */
     break;
 
   case 30:
 #line 122 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_type) = ya_type_void();}
-#line 1589 "parser.c" /* yacc.c:1646  */
+#line 1587 "parser.c" /* yacc.c:1646  */
     break;
 
   case 31:
 #line 125 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_intlit((yyvsp[0].ival));}
-#line 1595 "parser.c" /* yacc.c:1646  */
+#line 1593 "parser.c" /* yacc.c:1646  */
     break;
 
   case 32:
 #line 126 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_stringlit((yyvsp[0].sval));}
-#line 1601 "parser.c" /* yacc.c:1646  */
+#line 1599 "parser.c" /* yacc.c:1646  */
     break;
 
   case 33:
 #line 127 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_floatlit((yyvsp[0].fval));}
-#line 1607 "parser.c" /* yacc.c:1646  */
+#line 1605 "parser.c" /* yacc.c:1646  */
     break;
 
   case 34:
 #line 128 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_boollit((yyvsp[0].bval));}
-#line 1613 "parser.c" /* yacc.c:1646  */
+#line 1611 "parser.c" /* yacc.c:1646  */
     break;
 
   case 35:
 #line 129 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_id((yyvsp[0].id));}
-#line 1619 "parser.c" /* yacc.c:1646  */
+#line 1617 "parser.c" /* yacc.c:1646  */
     break;
 
   case 36:
 #line 131 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "+", (yyvsp[0].ya_t_exp));}
-#line 1625 "parser.c" /* yacc.c:1646  */
+#line 1623 "parser.c" /* yacc.c:1646  */
     break;
 
   case 37:
 #line 132 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "-", (yyvsp[0].ya_t_exp));}
-#line 1631 "parser.c" /* yacc.c:1646  */
+#line 1629 "parser.c" /* yacc.c:1646  */
     break;
 
   case 38:
 #line 133 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "*", (yyvsp[0].ya_t_exp));}
-#line 1637 "parser.c" /* yacc.c:1646  */
+#line 1635 "parser.c" /* yacc.c:1646  */
     break;
 
   case 39:
 #line 134 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "/", (yyvsp[0].ya_t_exp));}
-#line 1643 "parser.c" /* yacc.c:1646  */
+#line 1641 "parser.c" /* yacc.c:1646  */
     break;
 
   case 40:
 #line 136 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "==", (yyvsp[0].ya_t_exp));}
-#line 1649 "parser.c" /* yacc.c:1646  */
+#line 1647 "parser.c" /* yacc.c:1646  */
     break;
 
   case 41:
 #line 137 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "<", (yyvsp[0].ya_t_exp));}
-#line 1655 "parser.c" /* yacc.c:1646  */
+#line 1653 "parser.c" /* yacc.c:1646  */
     break;
 
   case 42:
 #line 138 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), ">", (yyvsp[0].ya_t_exp));}
-#line 1661 "parser.c" /* yacc.c:1646  */
+#line 1659 "parser.c" /* yacc.c:1646  */
     break;
 
   case 43:
 #line 139 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "<=", (yyvsp[0].ya_t_exp));}
-#line 1667 "parser.c" /* yacc.c:1646  */
+#line 1665 "parser.c" /* yacc.c:1646  */
     break;
 
   case 44:
 #line 140 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), ">=", (yyvsp[0].ya_t_exp));}
-#line 1673 "parser.c" /* yacc.c:1646  */
+#line 1671 "parser.c" /* yacc.c:1646  */
     break;
 
   case 45:
 #line 141 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_binop((yyvsp[-2].ya_t_exp), "!=", (yyvsp[0].ya_t_exp));}
-#line 1679 "parser.c" /* yacc.c:1646  */
+#line 1677 "parser.c" /* yacc.c:1646  */
     break;
 
   case 46:
 #line 143 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_par((yyvsp[-1].ya_t_exp));}
-#line 1685 "parser.c" /* yacc.c:1646  */
+#line 1683 "parser.c" /* yacc.c:1646  */
     break;
 
   case 47:
 #line 144 "yalang.y" /* yacc.c:1646  */
     {(yyval.ya_t_exp) = ya_exp_assign((yyvsp[-3].id), (yyvsp[-1].ya_t_exp));}
-#line 1691 "parser.c" /* yacc.c:1646  */
+#line 1689 "parser.c" /* yacc.c:1646  */
     break;
 
 
-#line 1695 "parser.c" /* yacc.c:1646  */
+#line 1693 "parser.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

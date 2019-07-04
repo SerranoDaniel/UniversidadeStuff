@@ -1,0 +1,10 @@
+1.
+			 6
+		  /  |  \
+		 6   6   2
+		/|\ /|\ /|\
+	    867 967 293
+
+2. r,x,m,n,w,z
+
+3. O minmax verifica todos os nós da arvore enquanto que o alfa-beta para a verificação de um ramo se já definiu que esse ramo vai ser pior que outro já avaliado, corta a verificação

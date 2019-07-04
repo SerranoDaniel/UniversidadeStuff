@@ -1,0 +1,13 @@
+h(E,V):-
+	h1(E,V1),
+	h2(E,V2),
+	V is -V1+V2.
+
+h1(s(X,Y),V):-
+	findall((X,Y), (blocked((X,Y),_);blocked(_,(X,Y))), Pl),
+	length(Pl, V).
+
+h2(s(X,Y),V):-
+	estado_inicial(s(A,B)),
+	estado_final(s(C,D)),
+	V is ((C-A) +(D-B)).

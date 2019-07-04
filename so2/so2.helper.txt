@@ -1,0 +1,26 @@
+	para eliminar:
+servlet showAllAllergies
+
+
+RegistServlet nao esta no web.xml
+
+
+
+digest (encriptacao) - DONE
+show entries perfil nao esta completo - FEITO EM CASA _ DONE
+ao adicionar  entry meter popup com outra cor - FEITO EM CASA - DON
+ao adicionar entry sem ver se ha markers da erro - DONE
+DONE verificar markers no raio de 100m - esta a ir buscar todas as entradas do user mas tem de ir buscar de todos os users e das alergias que o user tem DONE
+
+tentar incorporar mais jsp do tipo topmenu DONE
+
+
+apagar entrys ao clicar no mapa -  POCRL - AFINAL DONE CRL
+
+checkar todos os caminhos - DONE
+
+retirar email 
+
+
+
+organizar codigo e comentar - DONE

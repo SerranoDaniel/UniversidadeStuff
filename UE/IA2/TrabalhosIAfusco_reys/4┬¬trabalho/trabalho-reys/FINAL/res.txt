@@ -1,0 +1,1 @@
+X = [s1-inicial,s671-desloca(2,3),s662-agarra(2,3),s306-viraBC(2,3),s678-desloca(1,2),s4-agarra(1,2),s3-viraCC(1,2),s2-final] ? 

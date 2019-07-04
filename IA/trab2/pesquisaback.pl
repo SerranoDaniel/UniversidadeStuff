@@ -1,0 +1,11 @@
+b:- consult(sudoku),
+    estado_inicial(E0), 
+    back(E0,A),
+    esc(A).
+ 
+back(e([],A),A).
+back(E,Sol):- sucessor(E,E1), 
+          restricoes(E1),
+              back(E1,Sol).
+
+sucessor(e([v(N,D,_)|R],E),e(R,[v(N,D,V)|E])):- member(V,D).

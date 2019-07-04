@@ -13,7 +13,7 @@ Terminals unused in grammar
    RRPAR
 
 
-Grammar
+Gramática
 
     0 $accept: program $end
 
@@ -74,7 +74,7 @@ Grammar
    46    | ID LPAR exp RPAR
 
 
-Terminals, with rules where they appear
+Terminais, com as regras aonde aparecem
 
 $end (0) 0
 error (256)
@@ -128,422 +128,423 @@ LPAR (304) 6 7 45 46
 RPAR (305) 6 7 45 46
 
 
-Nonterminals, with rules where they appear
+Não-terminais, com as regras aonde aparecem
 
 $accept (51)
-    on left: 0
+    à esquerda: 0
 program (52)
-    on left: 1, on right: 0
+    à esquerda: 1, à direita: 0
 decls (53)
-    on left: 2 3, on right: 1 3
+    à esquerda: 2 3, à direita: 1 3
 decl (54)
-    on left: 4 5 6 7 8, on right: 2 3 14
+    à esquerda: 4 5 6 7 8, à direita: 2 3 14
 argdefs (55)
-    on left: 9 10, on right: 7 10
+    à esquerda: 9 10, à direita: 7 10
 argdef (56)
-    on left: 11, on right: 9 10
+    à esquerda: 11, à direita: 9 10
 stmts (57)
-    on left: 12 13, on right: 6 7 13 17 18 19
+    à esquerda: 12 13, à direita: 6 7 13 17 18 19
 stmt (58)
-    on left: 14 15 16 17 18 19 20 21 22, on right: 12 13
+    à esquerda: 14 15 16 17 18 19 20 21 22, à direita: 12 13
 ids (59)
-    on left: 23 24, on right: 4 5 24
+    à esquerda: 23 24, à direita: 4 5 24
 type (60)
-    on left: 25 26 27 28 29, on right: 4 5 6 7 8 11
+    à esquerda: 25 26 27 28 29, à direita: 4 5 6 7 8 11
 exp (61)
-    on left: 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46, on right:
-    5 15 16 17 18 19 20 21 22 35 36 37 38 39 40 41 42 43 44 45 46
+    à esquerda: 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46,
+    à direita: 5 15 16 17 18 19 20 21 22 35 36 37 38 39 40 41 42 43
+    44 45 46
 
 
-State 0
+Estado0
 
     0 $accept: . program $end
 
-    ID      shift, and go to state 1
-    DEFINE  shift, and go to state 2
+    ID      fazer shift, e ir para o estado 1
+    DEFINE  fazer shift, e ir para o estado 2
 
-    program  go to state 3
-    decls    go to state 4
-    decl     go to state 5
-    ids      go to state 6
+    program  ir para o estado 3
+    decls    ir para o estado 4
+    decl     ir para o estado 5
+    ids      ir para o estado 6
 
 
-State 1
+Estado1
 
     6 decl: ID . LPAR RPAR COLON type LCPAR stmts RCPAR SEMI
     7     | ID . LPAR argdefs RPAR COLON type LCPAR stmts RCPAR SEMI
    23 ids: ID .
    24    | ID . COMMA ids
 
-    COMMA  shift, and go to state 7
-    LPAR   shift, and go to state 8
+    COMMA  fazer shift, e ir para o estado 7
+    LPAR   fazer shift, e ir para o estado 8
 
-    $default  reduce using rule 23 (ids)
+    $default  reduzir usando a regra 23 (ids)
 
 
-State 2
+Estado2
 
     8 decl: DEFINE . ID type SEMI
 
-    ID  shift, and go to state 9
+    ID  fazer shift, e ir para o estado 9
 
 
-State 3
+Estado3
 
     0 $accept: program . $end
 
-    $end  shift, and go to state 10
+    $end  fazer shift, e ir para o estado 10
 
 
-State 4
+Estado4
 
     1 program: decls .
 
-    $default  reduce using rule 1 (program)
+    $default  reduzir usando a regra 1 (program)
 
 
-State 5
+Estado5
 
     2 decls: decl .
     3      | decl . decls
 
-    ID      shift, and go to state 1
-    DEFINE  shift, and go to state 2
+    ID      fazer shift, e ir para o estado 1
+    DEFINE  fazer shift, e ir para o estado 2
 
-    $default  reduce using rule 2 (decls)
+    $default  reduzir usando a regra 2 (decls)
 
-    decls  go to state 11
-    decl   go to state 5
-    ids    go to state 6
+    decls  ir para o estado 11
+    decl   ir para o estado 5
+    ids    ir para o estado 6
 
 
-State 6
+Estado6
 
     4 decl: ids . COLON type SEMI
     5     | ids . COLON type ASSIGN exp SEMI
 
-    COLON  shift, and go to state 12
+    COLON  fazer shift, e ir para o estado 12
 
 
-State 7
+Estado7
 
    24 ids: ID COMMA . ids
 
-    ID  shift, and go to state 13
+    ID  fazer shift, e ir para o estado 13
 
-    ids  go to state 14
+    ids  ir para o estado 14
 
 
-State 8
+Estado8
 
     6 decl: ID LPAR . RPAR COLON type LCPAR stmts RCPAR SEMI
     7     | ID LPAR . argdefs RPAR COLON type LCPAR stmts RCPAR SEMI
 
-    ID    shift, and go to state 15
-    RPAR  shift, and go to state 16
+    ID    fazer shift, e ir para o estado 15
+    RPAR  fazer shift, e ir para o estado 16
 
-    argdefs  go to state 17
-    argdef   go to state 18
+    argdefs  ir para o estado 17
+    argdef   ir para o estado 18
 
 
-State 9
+Estado9
 
     8 decl: DEFINE ID . type SEMI
 
-    T_INT     shift, and go to state 19
-    T_FLOAT   shift, and go to state 20
-    T_STRING  shift, and go to state 21
-    T_BOOL    shift, and go to state 22
-    VOID      shift, and go to state 23
+    T_INT     fazer shift, e ir para o estado 19
+    T_FLOAT   fazer shift, e ir para o estado 20
+    T_STRING  fazer shift, e ir para o estado 21
+    T_BOOL    fazer shift, e ir para o estado 22
+    VOID      fazer shift, e ir para o estado 23
 
-    type  go to state 24
+    type  ir para o estado 24
 
 
-State 10
+Estado10
 
     0 $accept: program $end .
 
-    $default  accept
+    $default  aceite
 
 
-State 11
+Estado11
 
     3 decls: decl decls .
 
-    $default  reduce using rule 3 (decls)
+    $default  reduzir usando a regra 3 (decls)
 
 
-State 12
+Estado12
 
     4 decl: ids COLON . type SEMI
     5     | ids COLON . type ASSIGN exp SEMI
 
-    T_INT     shift, and go to state 19
-    T_FLOAT   shift, and go to state 20
-    T_STRING  shift, and go to state 21
-    T_BOOL    shift, and go to state 22
-    VOID      shift, and go to state 23
+    T_INT     fazer shift, e ir para o estado 19
+    T_FLOAT   fazer shift, e ir para o estado 20
+    T_STRING  fazer shift, e ir para o estado 21
+    T_BOOL    fazer shift, e ir para o estado 22
+    VOID      fazer shift, e ir para o estado 23
 
-    type  go to state 25
+    type  ir para o estado 25
 
 
-State 13
+Estado13
 
    23 ids: ID .
    24    | ID . COMMA ids
 
-    COMMA  shift, and go to state 7
+    COMMA  fazer shift, e ir para o estado 7
 
-    $default  reduce using rule 23 (ids)
+    $default  reduzir usando a regra 23 (ids)
 
 
-State 14
+Estado14
 
    24 ids: ID COMMA ids .
 
-    $default  reduce using rule 24 (ids)
+    $default  reduzir usando a regra 24 (ids)
 
 
-State 15
+Estado15
 
    11 argdef: ID . COLON type
 
-    COLON  shift, and go to state 26
+    COLON  fazer shift, e ir para o estado 26
 
 
-State 16
+Estado16
 
     6 decl: ID LPAR RPAR . COLON type LCPAR stmts RCPAR SEMI
 
-    COLON  shift, and go to state 27
+    COLON  fazer shift, e ir para o estado 27
 
 
-State 17
+Estado17
 
     7 decl: ID LPAR argdefs . RPAR COLON type LCPAR stmts RCPAR SEMI
 
-    RPAR  shift, and go to state 28
+    RPAR  fazer shift, e ir para o estado 28
 
 
-State 18
+Estado18
 
     9 argdefs: argdef .
    10        | argdef . COMMA argdefs
 
-    COMMA  shift, and go to state 29
+    COMMA  fazer shift, e ir para o estado 29
 
-    $default  reduce using rule 9 (argdefs)
+    $default  reduzir usando a regra 9 (argdefs)
 
 
-State 19
+Estado19
 
    25 type: T_INT .
 
-    $default  reduce using rule 25 (type)
+    $default  reduzir usando a regra 25 (type)
 
 
-State 20
+Estado20
 
    26 type: T_FLOAT .
 
-    $default  reduce using rule 26 (type)
+    $default  reduzir usando a regra 26 (type)
 
 
-State 21
+Estado21
 
    27 type: T_STRING .
 
-    $default  reduce using rule 27 (type)
+    $default  reduzir usando a regra 27 (type)
 
 
-State 22
+Estado22
 
    28 type: T_BOOL .
 
-    $default  reduce using rule 28 (type)
+    $default  reduzir usando a regra 28 (type)
 
 
-State 23
+Estado23
 
    29 type: VOID .
 
-    $default  reduce using rule 29 (type)
+    $default  reduzir usando a regra 29 (type)
 
 
-State 24
+Estado24
 
     8 decl: DEFINE ID type . SEMI
 
-    SEMI  shift, and go to state 30
+    SEMI  fazer shift, e ir para o estado 30
 
 
-State 25
+Estado25
 
     4 decl: ids COLON type . SEMI
     5     | ids COLON type . ASSIGN exp SEMI
 
-    ASSIGN  shift, and go to state 31
-    SEMI    shift, and go to state 32
+    ASSIGN  fazer shift, e ir para o estado 31
+    SEMI    fazer shift, e ir para o estado 32
 
 
-State 26
+Estado26
 
    11 argdef: ID COLON . type
 
-    T_INT     shift, and go to state 19
-    T_FLOAT   shift, and go to state 20
-    T_STRING  shift, and go to state 21
-    T_BOOL    shift, and go to state 22
-    VOID      shift, and go to state 23
+    T_INT     fazer shift, e ir para o estado 19
+    T_FLOAT   fazer shift, e ir para o estado 20
+    T_STRING  fazer shift, e ir para o estado 21
+    T_BOOL    fazer shift, e ir para o estado 22
+    VOID      fazer shift, e ir para o estado 23
 
-    type  go to state 33
+    type  ir para o estado 33
 
 
-State 27
+Estado27
 
     6 decl: ID LPAR RPAR COLON . type LCPAR stmts RCPAR SEMI
 
-    T_INT     shift, and go to state 19
-    T_FLOAT   shift, and go to state 20
-    T_STRING  shift, and go to state 21
-    T_BOOL    shift, and go to state 22
-    VOID      shift, and go to state 23
+    T_INT     fazer shift, e ir para o estado 19
+    T_FLOAT   fazer shift, e ir para o estado 20
+    T_STRING  fazer shift, e ir para o estado 21
+    T_BOOL    fazer shift, e ir para o estado 22
+    VOID      fazer shift, e ir para o estado 23
 
-    type  go to state 34
+    type  ir para o estado 34
 
 
-State 28
+Estado28
 
     7 decl: ID LPAR argdefs RPAR . COLON type LCPAR stmts RCPAR SEMI
 
-    COLON  shift, and go to state 35
+    COLON  fazer shift, e ir para o estado 35
 
 
-State 29
+Estado29
 
    10 argdefs: argdef COMMA . argdefs
 
-    ID  shift, and go to state 15
+    ID  fazer shift, e ir para o estado 15
 
-    argdefs  go to state 36
-    argdef   go to state 18
+    argdefs  ir para o estado 36
+    argdef   ir para o estado 18
 
 
-State 30
+Estado30
 
     8 decl: DEFINE ID type SEMI .
 
-    $default  reduce using rule 8 (decl)
+    $default  reduzir usando a regra 8 (decl)
 
 
-State 31
+Estado31
 
     5 decl: ids COLON type ASSIGN . exp SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 43
+    exp  ir para o estado 43
 
 
-State 32
+Estado32
 
     4 decl: ids COLON type SEMI .
 
-    $default  reduce using rule 4 (decl)
+    $default  reduzir usando a regra 4 (decl)
 
 
-State 33
+Estado33
 
    11 argdef: ID COLON type .
 
-    $default  reduce using rule 11 (argdef)
+    $default  reduzir usando a regra 11 (argdef)
 
 
-State 34
+Estado34
 
     6 decl: ID LPAR RPAR COLON type . LCPAR stmts RCPAR SEMI
 
-    LCPAR  shift, and go to state 44
+    LCPAR  fazer shift, e ir para o estado 44
 
 
-State 35
+Estado35
 
     7 decl: ID LPAR argdefs RPAR COLON . type LCPAR stmts RCPAR SEMI
 
-    T_INT     shift, and go to state 19
-    T_FLOAT   shift, and go to state 20
-    T_STRING  shift, and go to state 21
-    T_BOOL    shift, and go to state 22
-    VOID      shift, and go to state 23
+    T_INT     fazer shift, e ir para o estado 19
+    T_FLOAT   fazer shift, e ir para o estado 20
+    T_STRING  fazer shift, e ir para o estado 21
+    T_BOOL    fazer shift, e ir para o estado 22
+    VOID      fazer shift, e ir para o estado 23
 
-    type  go to state 45
+    type  ir para o estado 45
 
 
-State 36
+Estado36
 
    10 argdefs: argdef COMMA argdefs .
 
-    $default  reduce using rule 10 (argdefs)
+    $default  reduzir usando a regra 10 (argdefs)
 
 
-State 37
+Estado37
 
    34 exp: ID .
    46    | ID . LPAR exp RPAR
 
-    LPAR  shift, and go to state 46
+    LPAR  fazer shift, e ir para o estado 46
 
-    $default  reduce using rule 34 (exp)
+    $default  reduzir usando a regra 34 (exp)
 
 
-State 38
+Estado38
 
    30 exp: INTLIT .
 
-    $default  reduce using rule 30 (exp)
+    $default  reduzir usando a regra 30 (exp)
 
 
-State 39
+Estado39
 
    32 exp: FLOATLIT .
 
-    $default  reduce using rule 32 (exp)
+    $default  reduzir usando a regra 32 (exp)
 
 
-State 40
+Estado40
 
    31 exp: STRINGLIT .
 
-    $default  reduce using rule 31 (exp)
+    $default  reduzir usando a regra 31 (exp)
 
 
-State 41
+Estado41
 
    33 exp: BOOLLIT .
 
-    $default  reduce using rule 33 (exp)
+    $default  reduzir usando a regra 33 (exp)
 
 
-State 42
+Estado42
 
    45 exp: LPAR . exp RPAR
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 47
+    exp  ir para o estado 47
 
 
-State 43
+Estado43
 
     5 decl: ids COLON type ASSIGN exp . SEMI
    35 exp: exp . ADD exp
@@ -557,59 +558,59 @@ State 43
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SEMI    shift, and go to state 48
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    SEMI    fazer shift, e ir para o estado 48
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 44
+Estado44
 
     6 decl: ID LPAR RPAR COLON type LCPAR . stmts RCPAR SEMI
 
-    ID      shift, and go to state 59
-    DEFINE  shift, and go to state 2
-    RETURN  shift, and go to state 60
-    WHILE   shift, and go to state 61
-    IF      shift, and go to state 62
-    PRINT   shift, and go to state 63
-    INPUT   shift, and go to state 64
+    ID      fazer shift, e ir para o estado 59
+    DEFINE  fazer shift, e ir para o estado 2
+    RETURN  fazer shift, e ir para o estado 60
+    WHILE   fazer shift, e ir para o estado 61
+    IF      fazer shift, e ir para o estado 62
+    PRINT   fazer shift, e ir para o estado 63
+    INPUT   fazer shift, e ir para o estado 64
 
-    decl   go to state 65
-    stmts  go to state 66
-    stmt   go to state 67
-    ids    go to state 6
+    decl   ir para o estado 65
+    stmts  ir para o estado 66
+    stmt   ir para o estado 67
+    ids    ir para o estado 6
 
 
-State 45
+Estado45
 
     7 decl: ID LPAR argdefs RPAR COLON type . LCPAR stmts RCPAR SEMI
 
-    LCPAR  shift, and go to state 68
+    LCPAR  fazer shift, e ir para o estado 68
 
 
-State 46
+Estado46
 
    46 exp: ID LPAR . exp RPAR
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 69
+    exp  ir para o estado 69
 
 
-State 47
+Estado47
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -623,167 +624,167 @@ State 47
    44    | exp . NE_OP exp
    45    | LPAR exp . RPAR
 
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
-    RPAR    shift, and go to state 70
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
+    RPAR    fazer shift, e ir para o estado 70
 
 
-State 48
+Estado48
 
     5 decl: ids COLON type ASSIGN exp SEMI .
 
-    $default  reduce using rule 5 (decl)
+    $default  reduzir usando a regra 5 (decl)
 
 
-State 49
+Estado49
 
    39 exp: exp EQ_OP . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 71
+    exp  ir para o estado 71
 
 
-State 50
+Estado50
 
    44 exp: exp NE_OP . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 72
+    exp  ir para o estado 72
 
 
-State 51
+Estado51
 
    43 exp: exp GET_OP . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 73
+    exp  ir para o estado 73
 
 
-State 52
+Estado52
 
    42 exp: exp LET_OP . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 74
+    exp  ir para o estado 74
 
 
-State 53
+Estado53
 
    41 exp: exp GT_OP . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 75
+    exp  ir para o estado 75
 
 
-State 54
+Estado54
 
    40 exp: exp LT_OP . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 76
+    exp  ir para o estado 76
 
 
-State 55
+Estado55
 
    36 exp: exp SUB . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 77
+    exp  ir para o estado 77
 
 
-State 56
+Estado56
 
    35 exp: exp ADD . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 78
+    exp  ir para o estado 78
 
 
-State 57
+Estado57
 
    37 exp: exp MUL . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 79
+    exp  ir para o estado 79
 
 
-State 58
+Estado58
 
    38 exp: exp DIV . exp
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 80
+    exp  ir para o estado 80
 
 
-State 59
+Estado59
 
     6 decl: ID . LPAR RPAR COLON type LCPAR stmts RCPAR SEMI
     7     | ID . LPAR argdefs RPAR COLON type LCPAR stmts RCPAR SEMI
@@ -792,145 +793,145 @@ State 59
    23 ids: ID .
    24    | ID . COMMA ids
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    ASSIGN     shift, and go to state 81
-    COMMA      shift, and go to state 7
-    LPAR       shift, and go to state 82
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    ASSIGN     fazer shift, e ir para o estado 81
+    COMMA      fazer shift, e ir para o estado 7
+    LPAR       fazer shift, e ir para o estado 82
 
-    $default  reduce using rule 23 (ids)
+    $default  reduzir usando a regra 23 (ids)
 
-    exp  go to state 83
+    exp  ir para o estado 83
 
 
-State 60
+Estado60
 
    20 stmt: RETURN . exp SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 84
+    exp  ir para o estado 84
 
 
-State 61
+Estado61
 
    19 stmt: WHILE . exp DO LCPAR stmts RCPAR SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 85
+    exp  ir para o estado 85
 
 
-State 62
+Estado62
 
    17 stmt: IF . exp THEN LCPAR stmts RCPAR SEMI
    18     | IF . exp THEN LCPAR stmts RCPAR ELSE LCPAR stmts RCPAR SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 86
+    exp  ir para o estado 86
 
 
-State 63
+Estado63
 
    21 stmt: PRINT . exp SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 87
+    exp  ir para o estado 87
 
 
-State 64
+Estado64
 
    22 stmt: INPUT . exp SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 88
+    exp  ir para o estado 88
 
 
-State 65
+Estado65
 
    14 stmt: decl .
 
-    $default  reduce using rule 14 (stmt)
+    $default  reduzir usando a regra 14 (stmt)
 
 
-State 66
+Estado66
 
     6 decl: ID LPAR RPAR COLON type LCPAR stmts . RCPAR SEMI
 
-    RCPAR  shift, and go to state 89
+    RCPAR  fazer shift, e ir para o estado 89
 
 
-State 67
+Estado67
 
    12 stmts: stmt .
    13      | stmt . stmts
 
-    ID      shift, and go to state 59
-    DEFINE  shift, and go to state 2
-    RETURN  shift, and go to state 60
-    WHILE   shift, and go to state 61
-    IF      shift, and go to state 62
-    PRINT   shift, and go to state 63
-    INPUT   shift, and go to state 64
+    ID      fazer shift, e ir para o estado 59
+    DEFINE  fazer shift, e ir para o estado 2
+    RETURN  fazer shift, e ir para o estado 60
+    WHILE   fazer shift, e ir para o estado 61
+    IF      fazer shift, e ir para o estado 62
+    PRINT   fazer shift, e ir para o estado 63
+    INPUT   fazer shift, e ir para o estado 64
 
-    $default  reduce using rule 12 (stmts)
+    $default  reduzir usando a regra 12 (stmts)
 
-    decl   go to state 65
-    stmts  go to state 90
-    stmt   go to state 67
-    ids    go to state 6
+    decl   ir para o estado 65
+    stmts  ir para o estado 90
+    stmt   ir para o estado 67
+    ids    ir para o estado 6
 
 
-State 68
+Estado68
 
     7 decl: ID LPAR argdefs RPAR COLON type LCPAR . stmts RCPAR SEMI
 
-    ID      shift, and go to state 59
-    DEFINE  shift, and go to state 2
-    RETURN  shift, and go to state 60
-    WHILE   shift, and go to state 61
-    IF      shift, and go to state 62
-    PRINT   shift, and go to state 63
-    INPUT   shift, and go to state 64
+    ID      fazer shift, e ir para o estado 59
+    DEFINE  fazer shift, e ir para o estado 2
+    RETURN  fazer shift, e ir para o estado 60
+    WHILE   fazer shift, e ir para o estado 61
+    IF      fazer shift, e ir para o estado 62
+    PRINT   fazer shift, e ir para o estado 63
+    INPUT   fazer shift, e ir para o estado 64
 
-    decl   go to state 65
-    stmts  go to state 91
-    stmt   go to state 67
-    ids    go to state 6
+    decl   ir para o estado 65
+    stmts  ir para o estado 91
+    stmt   ir para o estado 67
+    ids    ir para o estado 6
 
 
-State 69
+Estado69
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -944,27 +945,27 @@ State 69
    44    | exp . NE_OP exp
    46    | ID LPAR exp . RPAR
 
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
-    RPAR    shift, and go to state 92
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
+    RPAR    fazer shift, e ir para o estado 92
 
 
-State 70
+Estado70
 
    45 exp: LPAR exp RPAR .
 
-    $default  reduce using rule 45 (exp)
+    $default  reduzir usando a regra 45 (exp)
 
 
-State 71
+Estado71
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -978,22 +979,22 @@ State 71
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SUB  shift, and go to state 55
-    ADD  shift, and go to state 56
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    SUB  fazer shift, e ir para o estado 55
+    ADD  fazer shift, e ir para o estado 56
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    EQ_OP   error (nonassociative)
-    NE_OP   error (nonassociative)
-    GET_OP  error (nonassociative)
-    LET_OP  error (nonassociative)
-    GT_OP   error (nonassociative)
-    LT_OP   error (nonassociative)
+    EQ_OP   erro (não-associativo)
+    NE_OP   erro (não-associativo)
+    GET_OP  erro (não-associativo)
+    LET_OP  erro (não-associativo)
+    GT_OP   erro (não-associativo)
+    LT_OP   erro (não-associativo)
 
-    $default  reduce using rule 39 (exp)
+    $default  reduzir usando a regra 39 (exp)
 
 
-State 72
+Estado72
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1007,22 +1008,22 @@ State 72
    44    | exp . NE_OP exp
    44    | exp NE_OP exp .
 
-    SUB  shift, and go to state 55
-    ADD  shift, and go to state 56
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    SUB  fazer shift, e ir para o estado 55
+    ADD  fazer shift, e ir para o estado 56
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    EQ_OP   error (nonassociative)
-    NE_OP   error (nonassociative)
-    GET_OP  error (nonassociative)
-    LET_OP  error (nonassociative)
-    GT_OP   error (nonassociative)
-    LT_OP   error (nonassociative)
+    EQ_OP   erro (não-associativo)
+    NE_OP   erro (não-associativo)
+    GET_OP  erro (não-associativo)
+    LET_OP  erro (não-associativo)
+    GT_OP   erro (não-associativo)
+    LT_OP   erro (não-associativo)
 
-    $default  reduce using rule 44 (exp)
+    $default  reduzir usando a regra 44 (exp)
 
 
-State 73
+Estado73
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1036,22 +1037,22 @@ State 73
    43    | exp GET_OP exp .
    44    | exp . NE_OP exp
 
-    SUB  shift, and go to state 55
-    ADD  shift, and go to state 56
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    SUB  fazer shift, e ir para o estado 55
+    ADD  fazer shift, e ir para o estado 56
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    EQ_OP   error (nonassociative)
-    NE_OP   error (nonassociative)
-    GET_OP  error (nonassociative)
-    LET_OP  error (nonassociative)
-    GT_OP   error (nonassociative)
-    LT_OP   error (nonassociative)
+    EQ_OP   erro (não-associativo)
+    NE_OP   erro (não-associativo)
+    GET_OP  erro (não-associativo)
+    LET_OP  erro (não-associativo)
+    GT_OP   erro (não-associativo)
+    LT_OP   erro (não-associativo)
 
-    $default  reduce using rule 43 (exp)
+    $default  reduzir usando a regra 43 (exp)
 
 
-State 74
+Estado74
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1065,22 +1066,22 @@ State 74
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SUB  shift, and go to state 55
-    ADD  shift, and go to state 56
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    SUB  fazer shift, e ir para o estado 55
+    ADD  fazer shift, e ir para o estado 56
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    EQ_OP   error (nonassociative)
-    NE_OP   error (nonassociative)
-    GET_OP  error (nonassociative)
-    LET_OP  error (nonassociative)
-    GT_OP   error (nonassociative)
-    LT_OP   error (nonassociative)
+    EQ_OP   erro (não-associativo)
+    NE_OP   erro (não-associativo)
+    GET_OP  erro (não-associativo)
+    LET_OP  erro (não-associativo)
+    GT_OP   erro (não-associativo)
+    LT_OP   erro (não-associativo)
 
-    $default  reduce using rule 42 (exp)
+    $default  reduzir usando a regra 42 (exp)
 
 
-State 75
+Estado75
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1094,22 +1095,22 @@ State 75
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SUB  shift, and go to state 55
-    ADD  shift, and go to state 56
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    SUB  fazer shift, e ir para o estado 55
+    ADD  fazer shift, e ir para o estado 56
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    EQ_OP   error (nonassociative)
-    NE_OP   error (nonassociative)
-    GET_OP  error (nonassociative)
-    LET_OP  error (nonassociative)
-    GT_OP   error (nonassociative)
-    LT_OP   error (nonassociative)
+    EQ_OP   erro (não-associativo)
+    NE_OP   erro (não-associativo)
+    GET_OP  erro (não-associativo)
+    LET_OP  erro (não-associativo)
+    GT_OP   erro (não-associativo)
+    LT_OP   erro (não-associativo)
 
-    $default  reduce using rule 41 (exp)
+    $default  reduzir usando a regra 41 (exp)
 
 
-State 76
+Estado76
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1123,22 +1124,22 @@ State 76
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SUB  shift, and go to state 55
-    ADD  shift, and go to state 56
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    SUB  fazer shift, e ir para o estado 55
+    ADD  fazer shift, e ir para o estado 56
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    EQ_OP   error (nonassociative)
-    NE_OP   error (nonassociative)
-    GET_OP  error (nonassociative)
-    LET_OP  error (nonassociative)
-    GT_OP   error (nonassociative)
-    LT_OP   error (nonassociative)
+    EQ_OP   erro (não-associativo)
+    NE_OP   erro (não-associativo)
+    GET_OP  erro (não-associativo)
+    LET_OP  erro (não-associativo)
+    GT_OP   erro (não-associativo)
+    LT_OP   erro (não-associativo)
 
-    $default  reduce using rule 40 (exp)
+    $default  reduzir usando a regra 40 (exp)
 
 
-State 77
+Estado77
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1152,13 +1153,13 @@ State 77
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    $default  reduce using rule 36 (exp)
+    $default  reduzir usando a regra 36 (exp)
 
 
-State 78
+Estado78
 
    35 exp: exp . ADD exp
    35    | exp ADD exp .
@@ -1172,13 +1173,13 @@ State 78
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    MUL  shift, and go to state 57
-    DIV  shift, and go to state 58
+    MUL  fazer shift, e ir para o estado 57
+    DIV  fazer shift, e ir para o estado 58
 
-    $default  reduce using rule 35 (exp)
+    $default  reduzir usando a regra 35 (exp)
 
 
-State 79
+Estado79
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1192,10 +1193,10 @@ State 79
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    $default  reduce using rule 37 (exp)
+    $default  reduzir usando a regra 37 (exp)
 
 
-State 80
+Estado80
 
    35 exp: exp . ADD exp
    36    | exp . SUB exp
@@ -1209,43 +1210,43 @@ State 80
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    $default  reduce using rule 38 (exp)
+    $default  reduzir usando a regra 38 (exp)
 
 
-State 81
+Estado81
 
    16 stmt: ID ASSIGN . exp SEMI
 
-    ID         shift, and go to state 37
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
+    ID         fazer shift, e ir para o estado 37
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
 
-    exp  go to state 93
+    exp  ir para o estado 93
 
 
-State 82
+Estado82
 
     6 decl: ID LPAR . RPAR COLON type LCPAR stmts RCPAR SEMI
     7     | ID LPAR . argdefs RPAR COLON type LCPAR stmts RCPAR SEMI
    45 exp: LPAR . exp RPAR
 
-    ID         shift, and go to state 94
-    INTLIT     shift, and go to state 38
-    FLOATLIT   shift, and go to state 39
-    STRINGLIT  shift, and go to state 40
-    BOOLLIT    shift, and go to state 41
-    LPAR       shift, and go to state 42
-    RPAR       shift, and go to state 16
+    ID         fazer shift, e ir para o estado 94
+    INTLIT     fazer shift, e ir para o estado 38
+    FLOATLIT   fazer shift, e ir para o estado 39
+    STRINGLIT  fazer shift, e ir para o estado 40
+    BOOLLIT    fazer shift, e ir para o estado 41
+    LPAR       fazer shift, e ir para o estado 42
+    RPAR       fazer shift, e ir para o estado 16
 
-    argdefs  go to state 17
-    argdef   go to state 18
-    exp      go to state 47
+    argdefs  ir para o estado 17
+    argdef   ir para o estado 18
+    exp      ir para o estado 47
 
 
-State 83
+Estado83
 
    15 stmt: ID exp . SEMI
    35 exp: exp . ADD exp
@@ -1259,20 +1260,20 @@ State 83
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SEMI    shift, and go to state 95
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    SEMI    fazer shift, e ir para o estado 95
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 84
+Estado84
 
    20 stmt: RETURN exp . SEMI
    35 exp: exp . ADD exp
@@ -1286,20 +1287,20 @@ State 84
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SEMI    shift, and go to state 96
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    SEMI    fazer shift, e ir para o estado 96
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 85
+Estado85
 
    19 stmt: WHILE exp . DO LCPAR stmts RCPAR SEMI
    35 exp: exp . ADD exp
@@ -1313,20 +1314,20 @@ State 85
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    DO      shift, and go to state 97
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    DO      fazer shift, e ir para o estado 97
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 86
+Estado86
 
    17 stmt: IF exp . THEN LCPAR stmts RCPAR SEMI
    18     | IF exp . THEN LCPAR stmts RCPAR ELSE LCPAR stmts RCPAR SEMI
@@ -1341,20 +1342,20 @@ State 86
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    THEN    shift, and go to state 98
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    THEN    fazer shift, e ir para o estado 98
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 87
+Estado87
 
    21 stmt: PRINT exp . SEMI
    35 exp: exp . ADD exp
@@ -1368,20 +1369,20 @@ State 87
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SEMI    shift, and go to state 99
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    SEMI    fazer shift, e ir para o estado 99
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 88
+Estado88
 
    22 stmt: INPUT exp . SEMI
    35 exp: exp . ADD exp
@@ -1395,48 +1396,48 @@ State 88
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SEMI    shift, and go to state 100
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    SEMI    fazer shift, e ir para o estado 100
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 89
+Estado89
 
     6 decl: ID LPAR RPAR COLON type LCPAR stmts RCPAR . SEMI
 
-    SEMI  shift, and go to state 101
+    SEMI  fazer shift, e ir para o estado 101
 
 
-State 90
+Estado90
 
    13 stmts: stmt stmts .
 
-    $default  reduce using rule 13 (stmts)
+    $default  reduzir usando a regra 13 (stmts)
 
 
-State 91
+Estado91
 
     7 decl: ID LPAR argdefs RPAR COLON type LCPAR stmts . RCPAR SEMI
 
-    RCPAR  shift, and go to state 102
+    RCPAR  fazer shift, e ir para o estado 102
 
 
-State 92
+Estado92
 
    46 exp: ID LPAR exp RPAR .
 
-    $default  reduce using rule 46 (exp)
+    $default  reduzir usando a regra 46 (exp)
 
 
-State 93
+Estado93
 
    16 stmt: ID ASSIGN exp . SEMI
    35 exp: exp . ADD exp
@@ -1450,225 +1451,225 @@ State 93
    43    | exp . GET_OP exp
    44    | exp . NE_OP exp
 
-    SEMI    shift, and go to state 103
-    EQ_OP   shift, and go to state 49
-    NE_OP   shift, and go to state 50
-    GET_OP  shift, and go to state 51
-    LET_OP  shift, and go to state 52
-    GT_OP   shift, and go to state 53
-    LT_OP   shift, and go to state 54
-    SUB     shift, and go to state 55
-    ADD     shift, and go to state 56
-    MUL     shift, and go to state 57
-    DIV     shift, and go to state 58
+    SEMI    fazer shift, e ir para o estado 103
+    EQ_OP   fazer shift, e ir para o estado 49
+    NE_OP   fazer shift, e ir para o estado 50
+    GET_OP  fazer shift, e ir para o estado 51
+    LET_OP  fazer shift, e ir para o estado 52
+    GT_OP   fazer shift, e ir para o estado 53
+    LT_OP   fazer shift, e ir para o estado 54
+    SUB     fazer shift, e ir para o estado 55
+    ADD     fazer shift, e ir para o estado 56
+    MUL     fazer shift, e ir para o estado 57
+    DIV     fazer shift, e ir para o estado 58
 
 
-State 94
+Estado94
 
    11 argdef: ID . COLON type
    34 exp: ID .
    46    | ID . LPAR exp RPAR
 
-    COLON  shift, and go to state 26
-    LPAR   shift, and go to state 46
+    COLON  fazer shift, e ir para o estado 26
+    LPAR   fazer shift, e ir para o estado 46
 
-    $default  reduce using rule 34 (exp)
+    $default  reduzir usando a regra 34 (exp)
 
 
-State 95
+Estado95
 
    15 stmt: ID exp SEMI .
 
-    $default  reduce using rule 15 (stmt)
+    $default  reduzir usando a regra 15 (stmt)
 
 
-State 96
+Estado96
 
    20 stmt: RETURN exp SEMI .
 
-    $default  reduce using rule 20 (stmt)
+    $default  reduzir usando a regra 20 (stmt)
 
 
-State 97
+Estado97
 
    19 stmt: WHILE exp DO . LCPAR stmts RCPAR SEMI
 
-    LCPAR  shift, and go to state 104
+    LCPAR  fazer shift, e ir para o estado 104
 
 
-State 98
+Estado98
 
    17 stmt: IF exp THEN . LCPAR stmts RCPAR SEMI
    18     | IF exp THEN . LCPAR stmts RCPAR ELSE LCPAR stmts RCPAR SEMI
 
-    LCPAR  shift, and go to state 105
+    LCPAR  fazer shift, e ir para o estado 105
 
 
-State 99
+Estado99
 
    21 stmt: PRINT exp SEMI .
 
-    $default  reduce using rule 21 (stmt)
+    $default  reduzir usando a regra 21 (stmt)
 
 
-State 100
+Estado100
 
    22 stmt: INPUT exp SEMI .
 
-    $default  reduce using rule 22 (stmt)
+    $default  reduzir usando a regra 22 (stmt)
 
 
-State 101
+Estado101
 
     6 decl: ID LPAR RPAR COLON type LCPAR stmts RCPAR SEMI .
 
-    $default  reduce using rule 6 (decl)
+    $default  reduzir usando a regra 6 (decl)
 
 
-State 102
+Estado102
 
     7 decl: ID LPAR argdefs RPAR COLON type LCPAR stmts RCPAR . SEMI
 
-    SEMI  shift, and go to state 106
+    SEMI  fazer shift, e ir para o estado 106
 
 
-State 103
+Estado103
 
    16 stmt: ID ASSIGN exp SEMI .
 
-    $default  reduce using rule 16 (stmt)
+    $default  reduzir usando a regra 16 (stmt)
 
 
-State 104
+Estado104
 
    19 stmt: WHILE exp DO LCPAR . stmts RCPAR SEMI
 
-    ID      shift, and go to state 59
-    DEFINE  shift, and go to state 2
-    RETURN  shift, and go to state 60
-    WHILE   shift, and go to state 61
-    IF      shift, and go to state 62
-    PRINT   shift, and go to state 63
-    INPUT   shift, and go to state 64
+    ID      fazer shift, e ir para o estado 59
+    DEFINE  fazer shift, e ir para o estado 2
+    RETURN  fazer shift, e ir para o estado 60
+    WHILE   fazer shift, e ir para o estado 61
+    IF      fazer shift, e ir para o estado 62
+    PRINT   fazer shift, e ir para o estado 63
+    INPUT   fazer shift, e ir para o estado 64
 
-    decl   go to state 65
-    stmts  go to state 107
-    stmt   go to state 67
-    ids    go to state 6
+    decl   ir para o estado 65
+    stmts  ir para o estado 107
+    stmt   ir para o estado 67
+    ids    ir para o estado 6
 
 
-State 105
+Estado105
 
    17 stmt: IF exp THEN LCPAR . stmts RCPAR SEMI
    18     | IF exp THEN LCPAR . stmts RCPAR ELSE LCPAR stmts RCPAR SEMI
 
-    ID      shift, and go to state 59
-    DEFINE  shift, and go to state 2
-    RETURN  shift, and go to state 60
-    WHILE   shift, and go to state 61
-    IF      shift, and go to state 62
-    PRINT   shift, and go to state 63
-    INPUT   shift, and go to state 64
+    ID      fazer shift, e ir para o estado 59
+    DEFINE  fazer shift, e ir para o estado 2
+    RETURN  fazer shift, e ir para o estado 60
+    WHILE   fazer shift, e ir para o estado 61
+    IF      fazer shift, e ir para o estado 62
+    PRINT   fazer shift, e ir para o estado 63
+    INPUT   fazer shift, e ir para o estado 64
 
-    decl   go to state 65
-    stmts  go to state 108
-    stmt   go to state 67
-    ids    go to state 6
+    decl   ir para o estado 65
+    stmts  ir para o estado 108
+    stmt   ir para o estado 67
+    ids    ir para o estado 6
 
 
-State 106
+Estado106
 
     7 decl: ID LPAR argdefs RPAR COLON type LCPAR stmts RCPAR SEMI .
 
-    $default  reduce using rule 7 (decl)
+    $default  reduzir usando a regra 7 (decl)
 
 
-State 107
+Estado107
 
    19 stmt: WHILE exp DO LCPAR stmts . RCPAR SEMI
 
-    RCPAR  shift, and go to state 109
+    RCPAR  fazer shift, e ir para o estado 109
 
 
-State 108
+Estado108
 
    17 stmt: IF exp THEN LCPAR stmts . RCPAR SEMI
    18     | IF exp THEN LCPAR stmts . RCPAR ELSE LCPAR stmts RCPAR SEMI
 
-    RCPAR  shift, and go to state 110
+    RCPAR  fazer shift, e ir para o estado 110
 
 
-State 109
+Estado109
 
    19 stmt: WHILE exp DO LCPAR stmts RCPAR . SEMI
 
-    SEMI  shift, and go to state 111
+    SEMI  fazer shift, e ir para o estado 111
 
 
-State 110
+Estado110
 
    17 stmt: IF exp THEN LCPAR stmts RCPAR . SEMI
    18     | IF exp THEN LCPAR stmts RCPAR . ELSE LCPAR stmts RCPAR SEMI
 
-    ELSE  shift, and go to state 112
-    SEMI  shift, and go to state 113
+    ELSE  fazer shift, e ir para o estado 112
+    SEMI  fazer shift, e ir para o estado 113
 
 
-State 111
+Estado111
 
    19 stmt: WHILE exp DO LCPAR stmts RCPAR SEMI .
 
-    $default  reduce using rule 19 (stmt)
+    $default  reduzir usando a regra 19 (stmt)
 
 
-State 112
+Estado112
 
    18 stmt: IF exp THEN LCPAR stmts RCPAR ELSE . LCPAR stmts RCPAR SEMI
 
-    LCPAR  shift, and go to state 114
+    LCPAR  fazer shift, e ir para o estado 114
 
 
-State 113
+Estado113
 
    17 stmt: IF exp THEN LCPAR stmts RCPAR SEMI .
 
-    $default  reduce using rule 17 (stmt)
+    $default  reduzir usando a regra 17 (stmt)
 
 
-State 114
+Estado114
 
    18 stmt: IF exp THEN LCPAR stmts RCPAR ELSE LCPAR . stmts RCPAR SEMI
 
-    ID      shift, and go to state 59
-    DEFINE  shift, and go to state 2
-    RETURN  shift, and go to state 60
-    WHILE   shift, and go to state 61
-    IF      shift, and go to state 62
-    PRINT   shift, and go to state 63
-    INPUT   shift, and go to state 64
+    ID      fazer shift, e ir para o estado 59
+    DEFINE  fazer shift, e ir para o estado 2
+    RETURN  fazer shift, e ir para o estado 60
+    WHILE   fazer shift, e ir para o estado 61
+    IF      fazer shift, e ir para o estado 62
+    PRINT   fazer shift, e ir para o estado 63
+    INPUT   fazer shift, e ir para o estado 64
 
-    decl   go to state 65
-    stmts  go to state 115
-    stmt   go to state 67
-    ids    go to state 6
+    decl   ir para o estado 65
+    stmts  ir para o estado 115
+    stmt   ir para o estado 67
+    ids    ir para o estado 6
 
 
-State 115
+Estado115
 
    18 stmt: IF exp THEN LCPAR stmts RCPAR ELSE LCPAR stmts . RCPAR SEMI
 
-    RCPAR  shift, and go to state 116
+    RCPAR  fazer shift, e ir para o estado 116
 
 
-State 116
+Estado116
 
    18 stmt: IF exp THEN LCPAR stmts RCPAR ELSE LCPAR stmts RCPAR . SEMI
 
-    SEMI  shift, and go to state 117
+    SEMI  fazer shift, e ir para o estado 117
 
 
-State 117
+Estado117
 
    18 stmt: IF exp THEN LCPAR stmts RCPAR ELSE LCPAR stmts RCPAR SEMI .
 
-    $default  reduce using rule 18 (stmt)
+    $default  reduzir usando a regra 18 (stmt)

@@ -1,0 +1,50 @@
+1.
+
+a) c1 = 3L ; c2 = 2L
+Objectivo: c2 = 1L
+Sequência: 
+
+-Encher c2 e deitar em c1 (2,0)
+-Encher c2 e deitar em c1 (3,1)
+
+b) 
+
+i)
+c1 = 5L ; c2 = 2L
+Objectivo: (1,2)
+
+Sequência:
+-Encher o c1 e deitar em c2 (3,2)
+-Despejar o c2 (3,0)
+-Despejar o c1 no c2 (1,2)
+
+ii)
+c1 = 5L; c2 = 2L
+Objectivo: (3,2)
+
+Sequência:
+-Encher c1 e despejar em c2 (3,2)
+
+iii)
+c1 = 5L; c2 = 1L
+Objectivo: (5,1)
+
+Sequência:
+-Encher c1 e despejar em c2 (3,2)
+-Despejar c2 (2,0)
+-Encher c2 e despejar em c1 (4,0)
+-Encher c2 (4,2)
+-Despejar c2 em c1 (5,1)
+
+iv)
+c1 = 5L; c2 = 1L
+Objectivo: (1,1)
+
+Sequência:
+
+
+
+
+
+
+

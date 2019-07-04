@@ -1,0 +1,305 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> Termo
+Rule 1     Termo -> Termo Termo
+Rule 2     Termo -> LPAR Termo Termo RPAR
+Rule 3     Termo -> LAMBDA VAR DOT Termo
+Rule 4     Termo -> LPAR LAMBDA VAR DOT Termo RPAR
+Rule 5     Termo -> VAR
+Rule 6     Termo -> LPAR VAR LPAR
+
+Terminals, with rules where they appear
+
+DOT                  : 3 4
+LAMBDA               : 3 4
+LPAR                 : 2 4 6 6
+RPAR                 : 2 4
+VAR                  : 3 4 5 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+Termo                : 1 1 2 2 3 4 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LPAR            shift and go to state 1
+    LAMBDA          shift and go to state 2
+    VAR             shift and go to state 4
+
+    Termo                          shift and go to state 3
+
+state 1
+
+    (2) Termo -> LPAR . Termo Termo RPAR
+    (4) Termo -> LPAR . LAMBDA VAR DOT Termo RPAR
+    (6) Termo -> LPAR . VAR LPAR
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LAMBDA          shift and go to state 5
+    VAR             shift and go to state 7
+    LPAR            shift and go to state 1
+
+    Termo                          shift and go to state 6
+
+state 2
+
+    (3) Termo -> LAMBDA . VAR DOT Termo
+
+    VAR             shift and go to state 8
+
+
+state 3
+
+    (0) S' -> Termo .
+    (1) Termo -> Termo . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LPAR            shift and go to state 1
+    LAMBDA          shift and go to state 2
+    VAR             shift and go to state 4
+
+    Termo                          shift and go to state 9
+
+state 4
+
+    (5) Termo -> VAR .
+
+    LPAR            reduce using rule 5 (Termo -> VAR .)
+    LAMBDA          reduce using rule 5 (Termo -> VAR .)
+    VAR             reduce using rule 5 (Termo -> VAR .)
+    RPAR            reduce using rule 5 (Termo -> VAR .)
+    $end            reduce using rule 5 (Termo -> VAR .)
+
+
+state 5
+
+    (4) Termo -> LPAR LAMBDA . VAR DOT Termo RPAR
+    (3) Termo -> LAMBDA . VAR DOT Termo
+
+    VAR             shift and go to state 10
+
+
+state 6
+
+    (2) Termo -> LPAR Termo . Termo RPAR
+    (1) Termo -> Termo . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LPAR            shift and go to state 1
+    LAMBDA          shift and go to state 2
+    VAR             shift and go to state 4
+
+    Termo                          shift and go to state 11
+
+state 7
+
+    (6) Termo -> LPAR VAR . LPAR
+    (5) Termo -> VAR .
+
+    LPAR            reduce using rule 5 (Termo -> VAR .)
+    LAMBDA          reduce using rule 5 (Termo -> VAR .)
+    VAR             reduce using rule 5 (Termo -> VAR .)
+
+  ! LPAR            [ shift and go to state 12 ]
+
+
+state 8
+
+    (3) Termo -> LAMBDA VAR . DOT Termo
+
+    DOT             shift and go to state 13
+
+
+state 9
+
+    (1) Termo -> Termo Termo .
+    (1) Termo -> Termo . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LPAR            reduce using rule 1 (Termo -> Termo Termo .)
+    LAMBDA          reduce using rule 1 (Termo -> Termo Termo .)
+    VAR             reduce using rule 1 (Termo -> Termo Termo .)
+    RPAR            reduce using rule 1 (Termo -> Termo Termo .)
+    $end            reduce using rule 1 (Termo -> Termo Termo .)
+
+  ! LPAR            [ shift and go to state 1 ]
+  ! LAMBDA          [ shift and go to state 2 ]
+  ! VAR             [ shift and go to state 4 ]
+
+    Termo                          shift and go to state 9
+
+state 10
+
+    (4) Termo -> LPAR LAMBDA VAR . DOT Termo RPAR
+    (3) Termo -> LAMBDA VAR . DOT Termo
+
+    DOT             shift and go to state 14
+
+
+state 11
+
+    (2) Termo -> LPAR Termo Termo . RPAR
+    (1) Termo -> Termo Termo .
+    (1) Termo -> Termo . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    RPAR            shift and go to state 15
+    LPAR            reduce using rule 1 (Termo -> Termo Termo .)
+    LAMBDA          reduce using rule 1 (Termo -> Termo Termo .)
+    VAR             reduce using rule 1 (Termo -> Termo Termo .)
+
+  ! LPAR            [ shift and go to state 1 ]
+  ! LAMBDA          [ shift and go to state 2 ]
+  ! VAR             [ shift and go to state 4 ]
+
+    Termo                          shift and go to state 9
+
+state 12
+
+    (6) Termo -> LPAR VAR LPAR .
+
+    LPAR            reduce using rule 6 (Termo -> LPAR VAR LPAR .)
+    LAMBDA          reduce using rule 6 (Termo -> LPAR VAR LPAR .)
+    VAR             reduce using rule 6 (Termo -> LPAR VAR LPAR .)
+    RPAR            reduce using rule 6 (Termo -> LPAR VAR LPAR .)
+    $end            reduce using rule 6 (Termo -> LPAR VAR LPAR .)
+
+
+state 13
+
+    (3) Termo -> LAMBDA VAR DOT . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LPAR            shift and go to state 1
+    LAMBDA          shift and go to state 2
+    VAR             shift and go to state 4
+
+    Termo                          shift and go to state 16
+
+state 14
+
+    (4) Termo -> LPAR LAMBDA VAR DOT . Termo RPAR
+    (3) Termo -> LAMBDA VAR DOT . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LPAR            shift and go to state 1
+    LAMBDA          shift and go to state 2
+    VAR             shift and go to state 4
+
+    Termo                          shift and go to state 17
+
+state 15
+
+    (2) Termo -> LPAR Termo Termo RPAR .
+
+    LPAR            reduce using rule 2 (Termo -> LPAR Termo Termo RPAR .)
+    LAMBDA          reduce using rule 2 (Termo -> LPAR Termo Termo RPAR .)
+    VAR             reduce using rule 2 (Termo -> LPAR Termo Termo RPAR .)
+    RPAR            reduce using rule 2 (Termo -> LPAR Termo Termo RPAR .)
+    $end            reduce using rule 2 (Termo -> LPAR Termo Termo RPAR .)
+
+
+state 16
+
+    (3) Termo -> LAMBDA VAR DOT Termo .
+    (1) Termo -> Termo . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    LAMBDA          reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .)
+    RPAR            reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .)
+    $end            reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .)
+    LPAR            shift and go to state 1
+    VAR             shift and go to state 4
+
+  ! LPAR            [ reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .) ]
+  ! VAR             [ reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .) ]
+  ! LAMBDA          [ shift and go to state 2 ]
+
+    Termo                          shift and go to state 9
+
+state 17
+
+    (4) Termo -> LPAR LAMBDA VAR DOT Termo . RPAR
+    (3) Termo -> LAMBDA VAR DOT Termo .
+    (1) Termo -> Termo . Termo
+    (1) Termo -> . Termo Termo
+    (2) Termo -> . LPAR Termo Termo RPAR
+    (3) Termo -> . LAMBDA VAR DOT Termo
+    (4) Termo -> . LPAR LAMBDA VAR DOT Termo RPAR
+    (5) Termo -> . VAR
+    (6) Termo -> . LPAR VAR LPAR
+
+    RPAR            shift and go to state 18
+    LAMBDA          reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .)
+    LPAR            shift and go to state 1
+    VAR             shift and go to state 4
+
+  ! LPAR            [ reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .) ]
+  ! VAR             [ reduce using rule 3 (Termo -> LAMBDA VAR DOT Termo .) ]
+  ! LAMBDA          [ shift and go to state 2 ]
+
+    Termo                          shift and go to state 9
+
+state 18
+
+    (4) Termo -> LPAR LAMBDA VAR DOT Termo RPAR .
+
+    LPAR            reduce using rule 4 (Termo -> LPAR LAMBDA VAR DOT Termo RPAR .)
+    LAMBDA          reduce using rule 4 (Termo -> LPAR LAMBDA VAR DOT Termo RPAR .)
+    VAR             reduce using rule 4 (Termo -> LPAR LAMBDA VAR DOT Termo RPAR .)
+    RPAR            reduce using rule 4 (Termo -> LPAR LAMBDA VAR DOT Termo RPAR .)
+    $end            reduce using rule 4 (Termo -> LPAR LAMBDA VAR DOT Termo RPAR .)
+

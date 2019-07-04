@@ -1,0 +1,29 @@
+x
+
+\x.x
+
+(\x.x) x
+
+(\x.\y.x y) y
+
+(\x.x) (\x.x) z
+
+(\fx.f x) (\x.x) z
+
+\fx.f x
+
+(\fx.f x) (\x.x)
+
+(\xy.x y) (\y.y x)
+
+(\a.(\b.(\c.(\d.d c) (b c)) (b a)) (\bcd.b c (c d))) (\ab.b)
+
+(\x.x(\y.xyw)(\x.x)x
+
+(\x.x(\y.xyw)(\x.x)x)\x.xy 
+
+\xyz.xyz(\xyz.xyz(\xyz.xyz)) 
+
+x(\x.xy)z(\zy.zxy) 
+
+\x.(\x.x(\x.x(\x.(\x.x)))) 

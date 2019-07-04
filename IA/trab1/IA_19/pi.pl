@@ -21,6 +21,7 @@ pesquisa(Problema,Alg):-
 
 
 pesquisa(a,E,S):- pesquisa_a(E,S,0).
+pesquisa(ans,E,S) :- pesquisa_ans(E,S,0).
 
 %pesquisa_a([],_):- !,fail.
 pesquisa_a([no(E,Pai,Op,C,HC,P)|_],no(E,Pai,Op,C,HC,P),Expand):- 
@@ -41,10 +42,33 @@ pesquisa_a([E|R],Sol,Expand):- expande(E,Lseg), esc(E),
                               NE is Expand+1,
                               pesquisa_a(Resto,Sol,NE).
 
+pesquisa_ans([no(E,Pai,Op,C,HC,P)|_],no(E,Pai,Op,C,HC,P),Expand):- 
+    %write(a(HC,P,E)),nl, read(X),
+	nev(X),
+	Y is X+1, 
+	retract(nev(X)), 
+	assertz(nev(Y)),
+	estado_final(E),write('Expande: '),write(Expand),write('\n').
+
+pesquisa_ans([E|R],Sol,Expand):- expandea(E,Lseg), esc(E),
+                              insere_ord(Lseg,R,Resto),
+	listSize(Resto,X),
+	nmem(Y),
+	bigger(X,Y,Z),
+	retract(nmem(Y)),
+	assertz(nmem(Z)),
+                              NE is Expand+1,
+                              pesquisa_ans(Resto,Sol,NE).
+
 expande(no(E,Pai,Op,C,HC,P),L):- findall(no(En,
                                                             no(E,Pai,Op,C,HC,P),Opn,Cnn,HCnn,P1),
-                                    (op(E,Opn,En,Cn),P1 is P+1, Cnn is Cn+C, heu_1(En,H), 
+                                    (op(E,Opn,En,Cn),P1 is P+1, Cnn is Cn+C, heu_2(En,H), 
                                                                                           HCnn is Cnn+H), L).
+		
+expandea(no(E,Pai,Op,C,HC,P),L):- findall(no(En,
+                                                            no(E,Pai,Op,C,HC,P),Opn,Cnn,HCnn,P1),
+                                    (op(E,Opn,En,Cn),P1 is P+1, Cnn is Cn+C, heu_2(En,H), 
+                                                                                          HCnn is H), L).
 
 
 

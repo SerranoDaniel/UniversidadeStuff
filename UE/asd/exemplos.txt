@@ -1,0 +1,5 @@
+(!x.(!y.y)(xx))(!z.z)b
+(!x.x)(!x.x)(!x.x)(!x.x)
+(!x.xxx)(!y.y)
+(!x.(!y.y)x)b
+(!z.zz)(!y.y(!x.x)b)
